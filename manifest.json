@@ -1,0 +1,14 @@
+{
+  "name": "Arkaworld™ — Wholesale Battery Supplier",
+  "short_name": "Arkaworld",
+  "description": "Wholesale battery supplier in Surat. Bikes, Cars, EVs, Rickshaws, Inverters, Industrial.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111316",
+  "theme_color": "#3DD900",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "img/logo2.jpeg", "sizes": "192x192", "type": "image/jpeg" },
+    { "src": "img/logo2.jpeg", "sizes": "512x512", "type": "image/jpeg" }
+  ]
+}
