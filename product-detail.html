@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arkaworld™ — Product Details</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .product-detail-page {
+      min-height: 100vh;
+      background: var(--dark);
+      color: var(--text);
+      padding: 40px 20px;
+    }
+
+    .product-detail-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+      margin-bottom: 40px;
+      transition: gap 0.3s ease;
+    }
+
+    .back-link:hover {
+      gap: 12px;
+    }
+
+    .product-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .product-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    .product-detail-image {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 12px;
+      background: var(--dark2);
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .product-detail-image img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .product-detail-content h1 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 48px;
+      font-weight: 900;
+      margin: 0 0 20px 0;
+      background: linear-gradient(90deg, #0077CC, #00BFA5, #3DD900);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .product-detail-badge {
+      display: inline-block;
+      background: var(--green);
+      color: var(--dark);
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .product-detail-brand {
+      font-size: 14px;
+      color: #888;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 20px;
+    }
+
+    .product-detail-price {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 30px;
+    }
+
+    .product-detail-description {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+    }
+
+    .product-specs-section {
+      background: var(--dark2);
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+    }
+
+    .product-specs-section h3 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0 0 20px 0;
+      color: var(--text);
+    }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .specs-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .spec-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .spec-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--blue);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .spec-value {
+      font-size: 16px;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .cta-section {
+      display: flex;
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .cta-button {
+      flex: 1;
+      padding: 16px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .cta-primary {
+      background: linear-gradient(90deg, #0077CC, #00BFA5, #3DD900);
+      color: var(--dark);
+    }
+
+    .cta-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(0, 119, 204, 0.3);
+    }
+
+    .cta-secondary {
+      background: var(--dark2);
+      color: var(--blue);
+      border: 2px solid var(--blue);
+    }
+
+    .cta-secondary:hover {
+      background: var(--dark3);
+    }
+
+    .related-products-section {
+      margin-top: 80px;
+      padding-top: 60px;
+      border-top: 1px solid var(--dark2);
+    }
+
+    .related-products-section h2 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 36px;
+      font-weight: 900;
+      margin: 0 0 40px 0;
+    }
+
+    .related-products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .product-card-mini {
+      background: var(--dark2);
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 16px;
+    }
+
+    .product-card-mini:hover {
+      background: var(--dark3);
+      transform: translateY(-4px);
+    }
+
+    .product-card-mini-img {
+      width: 100%;
+      height: 150px;
+      background: var(--dark3);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+
+    .product-card-mini-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .product-card-mini-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .product-card-mini-spec {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .product-card-mini-btn {
+      width: 100%;
+      padding: 8px;
+      background: var(--green);
+      color: var(--dark);
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .product-card-mini-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .product-not-found {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .product-not-found h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .product-not-found p {
+      color: var(--text-muted);
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="product-detail-page">
+    <div class="product-detail-container">
+      <a href="products.html" class="back-link">← Back to Catalogue</a>
+      
+      <div id="product-content">
+        <!-- Will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get product ID from URL parameter
+    const params = new URLSearchParams(window.location.search);
+    const productId = params.get('product');
+
+    const productContent = document.getElementById('product-content');
+
+    // Fetch products from JSON
+    fetch('data/products-comprehensive.json')
+      .then(response => response.json())
+      .then(data => {
+        const productsDatabase = {};
+        data.products.forEach(p => {
+          productsDatabase[p.id] = p;
+        });
+
+        if (!productId || !productsDatabase[productId]) {
+          productContent.innerHTML = `
+            <div class="product-not-found">
+              <h2>Product Not Found</h2>
+              <p>Sorry, we couldn't find the product you're looking for.</p>
+              <a href="products.html" style="color: var(--blue); text-decoration: none; font-weight: 600;">← Return to Catalogue</a>
+            </div>
+          `;
+          return;
+        }
+
+        const product = productsDatabase[productId];
+      
+      // Build specs grid
+      const specsHtml = Object.entries(product.details).map(([key, value]) => `
+        <div class="spec-item">
+          <div class="spec-label">${key.replace(/([A-Z])/g, ' $1').toLowerCase()}</div>
+          <div class="spec-value">${value}</div>
+        </div>
+      `).join('');
+
+      // Get related products
+      const relatedProducts = Object.entries(productsDatabase)
+        .filter(([id, p]) => p.category === product.category && id !== productId)
+        .slice(0, 4);
+
+      const relatedHtml = relatedProducts.map(([id, p]) => `
+        <div class="product-card-mini" onclick="window.location.href='product-detail.html?product=${id}'">
+          <div class="product-card-mini-img">
+            <img src="img/${p.image}" alt="${p.name}">
+          </div>
+          <div class="product-card-mini-name">${p.name}</div>
+          <div class="product-card-mini-spec">${p.specs}</div>
+          <a href="contact.html" class="product-card-mini-btn" onclick="event.stopPropagation()">Get Quote</a>
+        </div>
+      `).join('');
+
+      // Update page title
+      document.title = `${product.name} | Arkaworld™`;
+
+      productContent.innerHTML = `
+        <div class="product-detail-grid">
+          <div class="product-detail-image">
+            <img src="img/${product.image}" alt="${product.name}">
+          </div>
+          
+          <div class="product-detail-content">
+            <span class="product-detail-badge">${product.badge}</span>
+            <h1>${product.name}</h1>
+            <div class="product-detail-brand">Brand: ${product.brand}</div>
+            <div class="product-detail-price">${product.price}</div>
+            <div class="product-detail-description">${product.description}</div>
+            
+            <div class="cta-section">
+              <a href="contact.html" class="cta-button cta-primary">Get Quote Now</a>
+              <a href="products.html" class="cta-button cta-secondary">Browse More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-specs-section">
+          <h3>Technical Specifications</h3>
+          <div class="specs-grid">
+            ${specsHtml}
+          </div>
+        </div>
+
+        ${relatedProducts.length > 0 ? `
+        <div class="related-products-section">
+          <h2>Related Products in ${product.category}</h2>
+          <div class="related-products-grid">
+            ${relatedHtml}
+          </div>
+        </div>
+        ` : ''}
+      `;
+      })
+      .catch(error => {
+        console.error('Error loading products:', error);
+        productContent.innerHTML = `
+          <div class="product-not-found">
+            <h2>Error Loading Product</h2>
+            <p>There was an error loading the product database.</p>
+            <a href="products.html" style="color: var(--blue); text-decoration: none; font-weight: 600;">← Return to Catalogue</a>
+          </div>
+        `;
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently Asked Questions about Arkaworld™ wholesale battery solutions for e-vehicles, solar, and energy storage.">
+    <title>FAQ - Arkaworld™ Wholesale Batteries</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: #111316;
+            color: #e0e0e0;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+            background: #111316;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .faq-header h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, #0077CC, #00BFA5, #3DD900);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .faq-header p {
+            font-size: 1.1rem;
+            color: #aaa;
+            font-family: 'Barlow', sans-serif;
+        }
+
+        .faq-section {
+            margin-bottom: 50px;
+        }
+
+        .faq-section-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #00BFA5;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3DD900;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-left: 4px solid #00BFA5;
+            padding-left: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-left-color: #3DD900;
+            transform: translateX(5px);
+        }
+
+        .faq-question {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .faq-item:hover .faq-question {
+            color: #00BFA5;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: #3DD900;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            display: none;
+            margin-top: 15px;
+            font-family: 'Barlow', sans-serif;
+            font-size: 1rem;
+            color: #c0c0c0;
+            line-height: 1.8;
+            animation: slideDown 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .faq-highlight {
+            background: rgba(0, 119, 204, 0.15);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #3DD900;
+            color: #d0d0d0;
+        }
+
+        .faq-highlight strong {
+            color: #00BFA5;
+        }
+
+        .contact-cta {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(0, 119, 204, 0.1), rgba(0, 191, 165, 0.1));
+            border-radius: 12px;
+        }
+
+        .contact-cta h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #e0e0e0;
+            margin-bottom: 15px;
+        }
+
+        .contact-cta p {
+            color: #aaa;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .contact-cta a {
+            display: inline-block;
+            background: linear-gradient(90deg, #0077CC, #00BFA5);
+            color: white;
+            padding: 12px 35px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-cta a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 119, 204, 0.3);
+        }
+
+        .nav-links {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+
+        .nav-links a {
+            color: #00BFA5;
+            text-decoration: none;
+            margin: 0 15px;
+            font-family: 'Barlow', sans-serif;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #3DD900;
+        }
+
+        @media (max-width: 768px) {
+            .faq-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .faq-section-title {
+                font-size: 1.4rem;
+            }
+
+            .faq-question {
+                font-size: 1rem;
+            }
+        }
+
+        .faq-answer ul {
+            color: #c0c0c0;
+        }
+
+        .faq-answer ul li {
+            color: #c0c0c0;
+        }
+
+        .faq-answer p {
+            color: #c0c0c0;
+        }
+
+        .faq-highlight ul {
+            color: #d0d0d0;
+        }
+
+        .faq-highlight ul li {
+            color: #d0d0d0;
+        }
+
+        .faq-highlight p {
+            color: #d0d0d0;
+        }
+    </style>
+</head>
+<body>
+    <div class="faq-container">
+        <div class="faq-header">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about Arkaworld™ wholesale battery solutions</p>
+        </div>
+
+        <!-- GENERAL SECTION -->
+        <div class="faq-section">
+            <h2 class="faq-section-title">General Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What is Arkaworld™?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Arkaworld™ is a leading wholesale supplier of advanced battery solutions for electric vehicles (e-cycles, e-rickshaws, e-scooters), solar energy systems, and industrial backup power. We specialize in LiFePO4, NMC, and traditional lead-acid battery technology, serving B2B customers including manufacturers, dealers, fleet operators, and system integrators across India.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Who can buy from Arkaworld™?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We primarily serve <strong>wholesale and B2B customers</strong> including:</p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li>E-vehicle manufacturers and integrators</li>
+                        <li>Authorized dealers and distributors</li>
+                        <li>Fleet operators (e-rickshaw, delivery)</li>
+                        <li>Solar installation companies</li>
+                        <li>System integrators and consultants</li>
+                        <li>Bulk institutional buyers</li>
+                    </ul>
+                    <p style="margin-top: 10px;">Bulk retail orders are also considered on a case-by-case basis.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What payment methods do you accept?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We accept multiple payment methods tailored for B2B transactions:</p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li><strong>Bank Transfer:</strong> NEFT, RTGS, IMPS</li>
+                        <li><strong>Cheque Payment:</strong> Post-dated or on-demand</li>
+                        <li><strong>Credit Terms:</strong> Net 15, Net 30, Net 60 (for approved vendors)</li>
+                        <li><strong>Digital Payment:</strong> UPI, Corporate Credit Cards</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><em>GST invoicing and custom billing available for all orders.</em></p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Are bulk discounts available?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! We offer tiered wholesale pricing:</p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li>5-10 units: 5-10% discount</li>
+                        <li>10-50 units: 10-15% discount</li>
+                        <li>50-100 units: 15-25% discount</li>
+                        <li>100+ units: Custom enterprise pricing</li>
+                    </ul>
+                    <p style="margin-top: 10px;">Contact our sales team for a personalized quote based on your order volume and specifications.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRODUCT SECTION -->
+        <div class="faq-section">
+            <h2 class="faq-section-title">Products & Specifications</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What types of batteries do you offer?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We offer a comprehensive range of battery technologies:</p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li><strong>LiFePO4 (LFP):</strong> Highest lifespan, safest lithium option, ideal for e-vehicles and solar</li>
+                        <li><strong>NMC Lithium:</strong> High energy density, best power-to-weight ratio for performance vehicles</li>
+                        <li><strong>Lead-Acid (SMF, AGM, Gel):</strong> Cost-effective, maintenance-free variants available</li>
+                        <li><strong>Hybrid Systems:</strong> Solar + Battery bundles with inverters</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What's the difference between LiFePO4 and NMC batteries?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-highlight">
+                        <p><strong>LiFePO4 (LFP):</strong></p>
+                        <ul style="margin-top: 5px; margin-left: 20px;">
+                            <li>3000-5000+ cycles (10+ year lifespan)</li>
+                            <li>Safest lithium chemistry, no thermal runaway</li>
+                            <li>Perfect for stationary and high-cycle applications</li>
+                            <li>Slightly lower energy density</li>
+                        </ul>
+                        <p style="margin-top: 10px;"><strong>NMC:</strong></p>
+                        <ul style="margin-top: 5px; margin-left: 20px;">
+                            <li>1000-2000 cycles (3-5 year lifespan)</li>
+                            <li>Higher energy density, lighter weight</li>
+                            <li>Best for performance and range applications</li>
+                            <li>Requires more careful thermal management</li>
+                        </ul>
+                    </div>
+                    <p style="margin-top: 10px;"><strong>Recommendation:</strong> LFP for cost-per-cycle, NMC for performance-critical applications.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I get custom battery configurations?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely! We offer <strong>custom engineering services</strong> for:</p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li>Non-standard voltage configurations (e.g., 57.6V, 102.4V)</li>
+                        <li>Specialized capacity packs</li>
+                        <li>Integration with existing BMS or controllers</li>
+                        <li>OEM white-label solutions</li>
+                        <li>Rapid prototyping and testing</li>
+                    </ul>
+                    <p style="margin-top: 10px;">Minimum quantities and lead times apply. Contact our engineering team for a feasibility study.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What warranty do your batteries come with?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Standard warranty coverage:</p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li><strong>Lead-Acid Batteries:</strong> 12-24 months</li>
+                        <li><strong>LiFePO4 Batteries:</strong> 2-5 years (depending on model)</li>
+                        <li><strong>Energy Storage Systems:</strong> 5-10 years</li>
+                        <li><strong>Solar Inverters:</strong> 10+ years</li>
+                    </ul>
+                    <div class="faq-highlight" style="margin-top: 15px;">
+                        <p><strong>Warranty includes:</strong> Manufacturing defects, reduced capacity (&lt;80%), internal shorts. <strong>Excludes:</strong> Physical damage, misuse, improper installation, unauthorized modifications.</p>
+                    </div>
+                    <p style="margin-top: 10px;">Extended warranty options available for commercial applications.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Are batteries compatible with different vehicle types?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Our batteries support multiple application categories:</p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li><strong>E-Rickshaws:</strong> 48V, 51.2V, 60.8V, 73.6V options</li>
+                        <li><strong>E-Cycles:</strong> 24V, 36V, 48V compact packs</li>
+                        <li><strong>E-Scooters:</strong> 48V, 60V, 72V high-performance</li>
+                        <li><strong>Motorcycles:</strong> 12V, 24V lead-acid variants</li>
+                        <li><strong>Solar Systems:</strong> 48V, 51.2V, 100V+ modular</li>
+                    </ul>
+                    <p style="margin-top: 10px;">Compatibility depends on your controller/BMS specifications. We provide technical support to verify fit.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- DELIVERY & LOGISTICS SECTION -->
+        <div class="faq-section">
+            <h2 class="faq-section-title">Delivery & Logistics</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What are your delivery timelines?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li><strong>Stock Items:</strong> 2-5 business days</li>
+                        <li><strong>Made-to-Order:</strong> 7-15 business days</li>
+                        <li><strong>Custom Configurations:</strong> 15-30 business days</li>
+                        <li><strong>Bulk Orders (100+ units):</strong> Negotiable timeline</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><em>Delivery times are approximate and depend on order complexity, payment clearance, and current demand.</em></p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Do you offer installation support?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! We provide multiple levels of support:</p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li><strong>Technical Documentation:</strong> Installation guides, wiring diagrams, safety procedures</li>
+                        <li><strong>Phone/Email Support:</strong> Free technical consulting for setup issues</li>
+                        <li><strong>On-Site Training:</strong> Available for large commercial orders (chargeable)</li>
+                        <li><strong>BMS Configuration:</strong> Custom firmware updates and monitoring setup</li>
+                    </ul>
+                    <p style="margin-top: 10px;">We also partner with certified integrators across India for installation services.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What's your shipping range across India?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We ship to <strong>all major cities and towns across India</strong>:</p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li><strong>Metro Cities:</strong> Overnight delivery available</li>
+                        <li><strong>Tier-1 Cities:</strong> 2-3 day delivery</li>
+                        <li><strong>Tier-2/3 Towns:</strong> 5-7 day delivery</li>
+                        <li><strong>Remote Areas:</strong> 7-15 day delivery</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Shipping is FREE</strong> for orders above ₹50,000. Below that, standard shipping charges apply based on weight and location.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Are batteries safely packaged for transport?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely. We follow strict packaging and transport regulations:</p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li><strong>Shock-Absorbing Foam:</strong> All batteries wrapped in protective foam padding</li>
+                        <li><strong>Temperature Control:</strong> Insulated boxes for lithium batteries (thermal management)</li>
+                        <li><strong>Leak-Proof Containers:</strong> Lead-acid batteries sealed in leakproof boxes</li>
+                        <li><strong>DOT/IATA Compliance:</strong> Lithium batteries shipped per international regulations</li>
+                        <li><strong>Full Insurance:</strong> Transit insurance included in all shipments</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><em>Every package is tracked and insured. We accept liability for any damage during transit.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TECHNICAL SUPPORT SECTION -->
+        <div class="faq-section">
+            <h2 class="faq-section-title">Technical Support & Maintenance</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How do I maintain my battery for maximum lifespan?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>For LiFePO4 Batteries (Recommended):</strong></p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li>Charge regularly — avoid deep discharge below 20%</li>
+                        <li>Avoid extreme temperatures (store in 15-35°C)</li>
+                        <li>Use certified chargers only</li>
+                        <li>Annual BMS health check recommended</li>
+                        <li>Zero maintenance — no water top-ups needed</li>
+                    </ul>
+                    <p style="margin-top: 15px;"><strong>For Lead-Acid Batteries:</strong></p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li>Check water levels monthly (if applicable)</li>
+                        <li>Ensure proper ventilation</li>
+                        <li>Keep terminal connections clean</li>
+                        <li>Avoid over-discharge</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What does "cycles" mean and why does it matter?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>A cycle</strong> is one complete charge-discharge-charge sequence.</p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li>LiFePO4 batteries typically offer 2000-5000+ cycles (10+ years daily use)</li>
+                        <li>Lead-acid batteries offer 500-1000 cycles (2-3 years)</li>
+                        <li>Higher cycle count = longer total lifespan = lower cost per year</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Example:</strong> A 48V 100Ah LiFePO4 with 3000 cycles can deliver 14.4 MWh total energy over its lifetime, making it more economical than lead-acid despite higher upfront cost.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I use LiFePO4 batteries in my existing lead-acid system?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>In most cases, <strong>yes</strong>, but with considerations:</p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li>LiFePO4 voltage nominal is 3.2V/cell vs 2V/cell for lead-acid</li>
+                        <li>Your charger must be LiFePO4-compatible</li>
+                        <li>Some older controllers may need calibration</li>
+                        <li>BMS protection is built-in with LiFePO4 (important safety feature)</li>
+                    </ul>
+                    <div class="faq-highlight" style="margin-top: 10px;">
+                        <p><strong>⚠️ Important:</strong> Do NOT mix LiFePO4 and lead-acid batteries in the same system without technical validation. Contact our support team to verify compatibility before switching.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How do I troubleshoot battery issues?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Common Issues & Solutions:</strong></p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li><strong>Low capacity:</strong> Check charger voltage, BMS health, temperature</li>
+                        <li><strong>Won't charge:</strong> Test charger output, verify connections, check BMS status</li>
+                        <li><strong>Rapid discharge:</strong> Possible internal short — stop use and contact support</li>
+                        <li><strong>Overheating:</strong> Reduce load, improve ventilation, check ambient temperature</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>First Step:</strong> Contact our technical support with battery model number and issue description. We'll guide you through diagnostics.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- POLICIES SECTION -->
+        <div class="faq-section">
+            <h2 class="faq-section-title">Returns & Policies</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What's your return policy?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Return Window:</strong> 7 days from delivery</p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li>Must be unopened, unused, in original packaging</li>
+                        <li>Refund issued within 5-7 business days after inspection</li>
+                        <li>Return shipping paid by customer (unless our error)</li>
+                        <li>10% restocking fee applies for opened batteries</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Exceptions:</strong> Damaged batteries, defective units, wrong items shipped are replaced free of cost.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What if I receive a damaged battery?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Contact us <strong>within 48 hours of delivery</strong> with:</p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li>Photos/videos of damage</li>
+                        <li>Shipping box condition</li>
+                        <li>Battery serial number and invoice</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Resolution:</strong> We'll send a replacement immediately with a prepaid return label. No additional charges.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Do you offer GST invoicing?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we're <strong>GST-registered</strong> and provide:</p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li>Standard GST invoicing for B2B customers</li>
+                        <li>GST Input Credit facilitation for registered businesses</li>
+                        <li>Custom billing for fleet operators and resellers</li>
+                        <li>Annual billing statements for accounting</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><em>Provide your GSTIN at checkout for proper billing.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT CTA -->
+        <div class="contact-cta">
+            <h3>Still Have Questions?</h3>
+            <p>Our expert team is ready to help with custom quotes, technical guidance, and bulk ordering.</p>
+            <a href="contact.html">Contact Our Sales Team</a>
+        </div>
+
+        <!-- NAVIGATION -->
+        <div class="nav-links">
+            <a href="index.html">← Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <script>
+        // FAQ Accordion Functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', function() {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').catch(err => console.log('SW registration failed'));
+        }
+    </script>
+</body>
+</html>

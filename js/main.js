@@ -379,4 +379,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 2500);
   })();
 
+  /* 11. PRODUCT CARD CLICK — Navigate to detail page */
+  function setupProductClickHandlers() {
+    document.querySelectorAll('.product-item[data-name]').forEach(card => {
+      const productId = card.getAttribute('data-name');
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', function (e) {
+        // Don't navigate if clicking the Get Quote button
+        if (e.target.closest('.product-btn') || e.target.closest('.cta-button')) {
+          return;
+        }
+        console.log('Navigating to product:', productId);
+        window.location.href = `product-detail.html?product=${productId}`;
+      });
+    });
+  }
+  
+  // Setup on initial load
+  setupProductClickHandlers();
+  
+  // Also setup on any dynamic content changes
+  const observer = new MutationObserver(() => {
+    setupProductClickHandlers();
+  });
+  
+  observer.observe(document.body, { childList: true, subtree: true });
+
 });
