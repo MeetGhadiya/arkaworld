@@ -195,17 +195,41 @@ document.addEventListener('DOMContentLoaded', function () {
     if (valid) {
       const successMsg = form.querySelector('.form-success');
       const submitBtn = form.querySelector('.form-submit');
-      if (successMsg) {
-        successMsg.textContent = '✅ Enquiry sent! We\'ll call you within 24 hours.';
-        successMsg.classList.add('show');
-        if (submitBtn) submitBtn.disabled = true;
-        setTimeout(() => {
-          form.reset();
-          successMsg.classList.remove('show');
+      if (submitBtn) submitBtn.disabled = true;
+
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(res => {
+        if (res.ok) {
+          if (successMsg) {
+            successMsg.textContent = '✅ Enquiry sent! We\'ll call you within 24 hours.';
+            successMsg.classList.add('show');
+          }
+          setTimeout(() => {
+            form.reset();
+            if (successMsg) successMsg.classList.remove('show');
+            if (submitBtn) submitBtn.disabled = false;
+            form.querySelectorAll('.form-group').forEach(g => g.classList.remove('error'));
+          }, 4000);
+        } else {
+          if (successMsg) {
+            successMsg.textContent = '❌ Something went wrong. Please call us directly.';
+            successMsg.classList.add('show');
+          }
           if (submitBtn) submitBtn.disabled = false;
-          form.querySelectorAll('.form-group').forEach(g => g.classList.remove('error'));
-        }, 4000);
-      }
+        }
+      })
+      .catch(() => {
+        if (successMsg) {
+          successMsg.textContent = '❌ Network error. Please call +91 95108 28573.';
+          successMsg.classList.add('show');
+        }
+        if (submitBtn) submitBtn.disabled = false;
+      });
     } else {
       // Scroll to first error
       const firstError = form.querySelector('.form-group.error input, .form-group.error select, .form-group.error textarea');
@@ -379,7 +403,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 2500);
   })();
 
-  /* 11. PRODUCT CARD CLICK — Navigate to detail page */
+  /* 16. PRODUCT CARD CLICK — Navigate to detail page */
   function setupProductClickHandlers() {
     document.querySelectorAll('.product-item[data-name]').forEach(card => {
       const productId = card.getAttribute('data-name');

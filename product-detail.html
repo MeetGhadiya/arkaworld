@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arkaworld™ — Product Details</title>
+  <title id="pageTitle">Arkaworld™ — Product Details</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -366,6 +367,7 @@
 
       // Update page title
       document.title = `${product.name} | Arkaworld™`;
+      document.getElementById('pageTitle').textContent = `${product.name} | Arkaworld™`;
 
       productContent.innerHTML = `
         <div class="product-detail-grid">

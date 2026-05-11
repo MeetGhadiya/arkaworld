@@ -1,7 +1,9 @@
 const CACHE = 'arkaworld-v5';
 const ASSETS = [
   '/', '/index.html', '/products.html', '/about.html', '/contact.html',
-  '/css/style.css', '/js/main.js', '/manifest.json'
+  '/faq.html', '/product-detail.html',
+  '/css/style.css', '/js/main.js', '/manifest.json',
+  '/js/products-data.js'
 ];
 
 self.addEventListener('install', e => {
