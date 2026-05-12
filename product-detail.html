@@ -53,19 +53,7 @@
     }
 
     .product-detail-image {
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-      border-radius: 12px;
-      background: var(--dark2);
-      padding: 20px;
-      overflow: hidden;
-    }
-
-    .product-detail-image img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
+      display: none;
     }
 
     .product-detail-content h1 {
@@ -234,18 +222,7 @@
     }
 
     .product-card-mini-img {
-      width: 100%;
-      height: 150px;
-      background: var(--dark3);
-      border-radius: 6px;
-      overflow: hidden;
-      margin-bottom: 12px;
-    }
-
-    .product-card-mini-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+      display: none;
     }
 
     .product-card-mini-name {
@@ -319,6 +296,27 @@
 
     const productContent = document.getElementById('product-content');
 
+    // Comprehensive fallback product database for products shown in products.html
+    const fallbackProducts = {
+      'standard-mf-12v-25-5ah': { id: 'standard-mf-12v-25-5ah', name: 'Standard MF 12V 2.5-5Ah', category: 'bike', badge: 'Standard MF', brand: 'EXIDE • AMARON', image: 'hero-product.jpeg', specs: '12V • 2.5-5Ah • MF Sealed • 2-3 Years Life', price: 'Wholesale / On Enquiry', description: 'Sealed maintenance-free battery for 100cc–150cc motorcycles and scooters. Compatible with Hero Splendor, Honda Activa, Bajaj, TVS. Zero maintenance. Ready to install, pre-charged.', details: { voltage: '12V', capacity: '2.5-5Ah', type: 'MF Sealed', lifespan: '2-3 Years', maintenance: 'Zero', warranty: '1 year' } },
+      'high-cca-12v-7ah-agm': { id: 'high-cca-12v-7ah-agm', name: 'High CCA 12V 7Ah AGM', category: 'bike', badge: 'High CCA', brand: 'AMARON • SF SONIC', image: 'battery-car2.jpeg', specs: '12V • 7Ah • AGM • 100A CCA • 2-4 Years', price: 'Wholesale / On Enquiry', description: 'Engineered for automatic scooters needing instant starts. AGM technology handles stop-start city traffic. Superior cold cranking for reliable ignition in all weather. Overcharge tolerant.', details: { voltage: '12V', capacity: '7Ah', technology: 'AGM', cca: '100A', lifespan: '2-4 Years' } },
+      'performance-agm-12v-9ah': { id: 'performance-agm-12v-9ah', name: 'Performance AGM 12V 9Ah', category: 'bike', badge: 'Performance', brand: 'EXIDE • LIVGUARD', image: 'battery-car2.jpeg', specs: '12V • 9Ah • AGM • 130A CCA • 3-5 Years', price: 'Wholesale / On Enquiry', description: 'Built for 200cc–250cc high-performance bikes (Pulsar, Royal Enfield, KTM, Yamaha). Vibration-proof plates. Low self-discharge for long storage. Handles hard acceleration seamlessly.', details: { voltage: '12V', capacity: '9Ah', technology: 'AGM', cca: '130A', lifespan: '3-5 Years' } },
+      'hatchback-smf-12v-35ah': { id: 'hatchback-smf-12v-35ah', name: 'Hatchback SMF 12V 35Ah', category: 'car', badge: 'Hatchback Grade', brand: 'EXIDE • AMARON', image: 'battery-car.jpeg', specs: '12V • 35Ah • SMF • 300A CCA • 3-4 Years', price: 'Wholesale / On Enquiry', description: 'Ideal for Maruti Alto, Swift, WagonR. Sealed maintenance-free with spill-proof design. Reliable start even in peak summer heat. 55 min reserve capacity for city stop-start driving.', details: { voltage: '12V', capacity: '35Ah', type: 'SMF', cca: '300A', lifespan: '3-4 Years' } },
+      'sedan-smf-12v-55ah': { id: 'sedan-smf-12v-55ah', name: 'Sedan SMF 12V 55Ah', category: 'car', badge: 'Sedan Class', brand: 'AMARON • LIVGUARD', image: 'battery-car.jpeg', specs: '12V • 55Ah • SMF • 450A CCA • 3-5 Years', price: 'Wholesale / On Enquiry', description: 'Perfect for Honda City, Hyundai Verna, Maruti Ciaz. Handles modern car electrical loads (AC, infotainment, powered accessories). Heat Guard technology engineered for Indian summers. 90 min reserve capacity.', details: { voltage: '12V', capacity: '55Ah', type: 'SMF', cca: '450A', lifespan: '3-5 Years' } },
+      'suv-agm-12v-75-100ah': { id: 'suv-agm-12v-75-100ah', name: 'SUV AGM 12V 75-100Ah', category: 'car', badge: 'SUV/MUV', brand: 'EXIDE • BASE', image: 'battery-car.jpeg', specs: '12V • 75-100Ah • AGM • 700A CCA • 4-6 Years', price: 'Wholesale / On Enquiry', description: 'Engineered for Toyota Fortuner, Tata Safari, Mahindra XUV700. Stop-start compatible. Handles heavy electrical loads (sunroof, 360° cameras, rear HVAC). AGM technology for 3× more cycles. 140-180 min reserve capacity.', details: { voltage: '12V', capacity: '75-100Ah', technology: 'AGM', cca: '700A', lifespan: '4-6 Years' } },
+      'diesel-heavy-duty-12v-100ah': { id: 'diesel-heavy-duty-12v-100ah', name: 'Diesel Heavy Duty 12V 100Ah', category: 'car', badge: 'Diesel HD', brand: 'EXIDE • SF SONIC', image: 'battery-car.jpeg', specs: '12V • 100Ah • SMF • 800A CCA • 4-5 Years', price: 'Wholesale / On Enquiry', description: 'Built for diesel engine compression starting. Tata Fortuner Diesel, Scorpio Diesel, commercial vehicles, taxis. Industry-leading 800A CCA. 180 min reserve capacity. Corrosion-resistant terminals for coastal areas.', details: { voltage: '12V', capacity: '100Ah', type: 'SMF', cca: '800A', lifespan: '4-5 Years' } },
+      '6v-100ah-deep-cycle-pack': { id: '6v-100ah-deep-cycle-pack', name: '6V×4 Pack (24V 100Ah)', category: 'rickshaw', badge: 'Standard', brand: 'EXIDE • OKAYA', image: 'battery-rickshaw.jpeg', specs: '6V • 100Ah • 4-piece • 24V System • 1200+ Cycles', price: 'Wholesale / On Enquiry', description: 'Standard e-rickshaw (3-seater+driver). Deep-cycle tubular plates. 80-100 km range per charge. Robust terminals handle 3-wheeler vibration. Compatible with most chargers. Set of 4 matched batteries.', details: { voltage: '6V', capacity: '100Ah', system: '24V (4-piece)', cycles: '1200+', range: '80-100 km' } },
+      '8v-150ah-high-capacity-pack': { id: '8v-150ah-high-capacity-pack', name: '8V×4 Pack (32V 150Ah)', category: 'rickshaw', badge: 'High Capacity', brand: 'AMARON • LUMINOUS', image: 'battery-rickshaw.jpeg', specs: '8V • 150Ah • 4-piece • 32V System • 1200+ Cycles', price: 'Wholesale / On Enquiry', description: 'Heavy-load e-rickshaws (5-6 passenger). 32V high-power motor compatibility. 120-140 km extended range. Enhanced tubular plates for heavy daily use. Rural long-distance & double-shift operations. Semi-sealed for low maintenance.', details: { voltage: '8V', capacity: '150Ah', system: '32V (4-piece)', cycles: '1200+', range: '120-140 km' } },
+      '12v-200ah-cargo-loader': { id: '12v-200ah-cargo-loader', name: 'E-Cart Cargo 12V 200Ah', category: 'rickshaw', badge: 'Cargo HD', brand: 'EXIDE • BASE', image: 'battery-rickshaw.jpeg', specs: '12V • 200Ah • Deep Cycle • 1000+ Cycles', price: 'Wholesale / On Enquiry', description: 'Electric cargo loaders & delivery e-carts. Sustains high discharge rates under full load. Multi-shift commercial operations (3+ years daily use). Heavy-gauge cable terminals. Rugged polypropylene case. Warehouse pallet movers & last-mile logistics.', details: { voltage: '12V', capacity: '200Ah', type: 'Deep Cycle', cycles: '1000+', applications: 'Cargo & delivery' } },
+      '48v-20ah-lfp': { id: '48v-20ah-lfp', name: '48V 20Ah LiFePO4', category: 'ev', badge: 'Entry LFP', brand: 'OKAYA EV', image: 'battery-ev.jpeg', specs: '48V • 20Ah • 960Wh • LFP • 1500+ Cycles', price: 'Wholesale / On Enquiry', description: 'Entry-level & mid-range e-scooters. 60-80 km range per charge. Smart BMS with multi-protection (overcharge, overcurrent, thermal). 4-5 hour standard charge / 2 hour fast charge. 8-10 kg lightweight. Plug & Play standard connector.', details: { voltage: '48V', capacity: '20Ah', energy: '960Wh', chemistry: 'LiFePO4', cycles: '1500+', range: '60-80 km' } },
+      '60v-30ah-lfp': { id: '60v-30ah-lfp', name: '60V 30Ah LiFePO4', category: 'ev', badge: 'Mid LFP', brand: 'EXIDE LIVO', image: 'battery-ev.jpeg', specs: '60V • 30Ah • 1800Wh • LFP • 1500+ Cycles', price: 'Wholesale / On Enquiry', description: 'Most popular upgrade for dealers. ~100 km range per charge. Auto cell-balancing BMS. Bluetooth monitoring available (optional). IP65 weatherproof. Drop-in replacement for 60V lead-acid packs. 13-15 kg lightweight.', details: { voltage: '60V', capacity: '30Ah', energy: '1800Wh', chemistry: 'LiFePO4', cycles: '1500+', range: '~100 km' } },
+      'flat-plate-12v-100ah': { id: 'flat-plate-12v-100ah', name: 'Flat Plate 12V 100Ah', category: 'inverter', badge: 'Entry Inverter', brand: 'LUMINOUS • MICROTEK', image: 'battery-inverter.jpeg', specs: '12V • 100Ah • Flat Plate • 500-600 Cycles', price: 'Wholesale / On Enquiry', description: 'Entry-level home inverter battery. 3-4 hours backup (basic home load: 2 fans+5 LEDs). Compatible with all major inverter brands. Fast recharge 10-12 hours. Low-acid design reduces spillage. Best price-per-Ah in lead-acid segment. 2-3 years life.', details: { voltage: '12V', capacity: '100Ah', type: 'Flat Plate', cycles: '500-600', backup: '3-4 hours' } },
+      'tall-tubular-12v-150-200ah': { id: 'tall-tubular-12v-150-200ah', name: 'Tall Tubular 12V 150-200Ah', category: 'inverter', badge: 'Premium TT', brand: 'LUMINOUS • EXIDE', image: 'battery-inverter.jpeg', specs: '12V • 150-200Ah • Tubular • 1500+ Cycles', price: 'Wholesale / On Enquiry', description: 'Premium choice for extended power cuts. 6-12 hour backup. Tubular plate design = 3× longer life vs flat plate. Deep discharge recovery excellent. Fast recharge. Low water loss. Engineered for 45°C+ Indian summers. Suitable for solar. 4-5 years life.', details: { voltage: '12V', capacity: '150-200Ah', type: 'Tubular', cycles: '1500+', backup: '6-12 hours' } },
+      'storage-5kwh': { id: 'storage-5kwh', name: '5kWh ESS Wall Mount', category: 'storage', badge: '5kWh', brand: 'OEM', image: 'battery-industrial.jpeg', specs: '48V • 100Ah • 5kWh • LFP • 3000+ Cycles • 42 kg', price: 'Wholesale / On Enquiry', description: 'Entry-level home energy storage. Wall-mount compact design. 4-6 hour home backup (typical load). Solar + grid hybrid. App monitoring. Plug & Play installation. 10+ year warranty.', details: { voltage: '48V', capacity: '100Ah', energy: '5kWh', chemistry: 'LiFePO4', cycles: '3000+', backup: '4-6 hours' } },
+      'solar-inverter-3kw': { id: 'solar-inverter-3kw', name: 'Hybrid Solar Inverter 3kW', category: 'solar-inverter', badge: '3kW', brand: 'Solar Ready', image: 'battery-inverter.jpeg', specs: '3000W • 48V • MPPT • Single Phase • WiFi Monitoring • IP65', price: 'Wholesale / On Enquiry', description: 'Pure sine wave hybrid solar inverter. Single-phase MPPT charger. Solar + grid + battery charge modes. WiFi/Bluetooth monitoring. LiFePO4 compatible. Suitable for 2-3 kW solar systems. 10-year warranty.', details: { power: '3000W', voltage: '48V', type: 'MPPT', phases: 'Single', monitoring: 'WiFi/Bluetooth', warranty: '10 years' } },
+      'vrla-agm-12v-100-150ah': { id: 'vrla-agm-12v-100-150ah', name: 'VRLA AGM 12V 100-150Ah', category: 'industrial', badge: 'VRLA AGM', brand: 'EXIDE • AMARON', image: 'battery-industrial.jpeg', specs: '12V • 100-150Ah • VRLA • 10 Year Life • <3% self-discharge', price: 'Wholesale / On Enquiry', description: 'Telecom towers, server rooms, hospitals, ATMs, institutional UPS. Valve-regulated sealed construction. Zero maintenance. Any mounting orientation. 10-year design life (float service). 300-400 cycles. -15°C to +50°C operation. Industry standard for critical infrastructure.', details: { voltage: '12V', capacity: '100-150Ah', type: 'VRLA AGM', lifespan: '10 years', cycles: '300-400' } }
+    };
+
     // Fetch products from JSON
     fetch('data/products-comprehensive.json')
       .then(response => response.json())
@@ -328,7 +326,10 @@
           productsDatabase[p.id] = p;
         });
 
-        if (!productId || !productsDatabase[productId]) {
+        // Merge with fallback products
+        const allProducts = { ...fallbackProducts, ...productsDatabase };
+
+        if (!productId || !allProducts[productId]) {
           productContent.innerHTML = `
             <div class="product-not-found">
               <h2>Product Not Found</h2>
@@ -339,7 +340,7 @@
           return;
         }
 
-        const product = productsDatabase[productId];
+        const product = allProducts[productId];
       
       // Build specs grid
       const specsHtml = Object.entries(product.details).map(([key, value]) => `
@@ -350,15 +351,12 @@
       `).join('');
 
       // Get related products
-      const relatedProducts = Object.entries(productsDatabase)
+      const relatedProducts = Object.entries(allProducts)
         .filter(([id, p]) => p.category === product.category && id !== productId)
         .slice(0, 4);
 
       const relatedHtml = relatedProducts.map(([id, p]) => `
         <div class="product-card-mini" onclick="window.location.href='product-detail.html?product=${id}'">
-          <div class="product-card-mini-img">
-            <img src="img/${p.image}" alt="${p.name}">
-          </div>
           <div class="product-card-mini-name">${p.name}</div>
           <div class="product-card-mini-spec">${p.specs}</div>
           <a href="contact.html" class="product-card-mini-btn" onclick="event.stopPropagation()">Get Quote</a>
@@ -370,22 +368,16 @@
       document.getElementById('pageTitle').textContent = `${product.name} | Arkaworld™`;
 
       productContent.innerHTML = `
-        <div class="product-detail-grid">
-          <div class="product-detail-image">
-            <img src="img/${product.image}" alt="${product.name}">
-          </div>
+        <div class="product-detail-content">
+          <span class="product-detail-badge">${product.badge}</span>
+          <h1>${product.name}</h1>
+          <div class="product-detail-brand">Brand: ${product.brand}</div>
+          <div class="product-detail-price">${product.price}</div>
+          <div class="product-detail-description">${product.description}</div>
           
-          <div class="product-detail-content">
-            <span class="product-detail-badge">${product.badge}</span>
-            <h1>${product.name}</h1>
-            <div class="product-detail-brand">Brand: ${product.brand}</div>
-            <div class="product-detail-price">${product.price}</div>
-            <div class="product-detail-description">${product.description}</div>
-            
-            <div class="cta-section">
-              <a href="contact.html" class="cta-button cta-primary">Get Quote Now</a>
-              <a href="products.html" class="cta-button cta-secondary">Browse More</a>
-            </div>
+          <div class="cta-section">
+            <a href="contact.html" class="cta-button cta-primary">Get Quote Now</a>
+            <a href="products.html" class="cta-button cta-secondary">Browse More</a>
           </div>
         </div>
 

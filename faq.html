@@ -22,7 +22,7 @@
 
         .faq-container {
             max-width: 900px;
-            margin: 60px auto;
+            margin: 100px auto 60px;
             padding: 0 20px;
             background: #111316;
         }
@@ -179,23 +179,27 @@
             box-shadow: 0 10px 25px rgba(0, 119, 204, 0.3);
         }
 
-        .nav-links {
+        .faq-footer-nav {
             text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #333;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
-        .nav-links a {
+        .faq-footer-nav a {
             color: #00BFA5;
             text-decoration: none;
-            margin: 0 15px;
             font-family: 'Barlow', sans-serif;
             font-weight: 500;
+            font-size: 14px;
             transition: color 0.3s ease;
         }
 
-        .nav-links a:hover {
+        .faq-footer-nav a:hover {
             color: #3DD900;
         }
 
@@ -240,7 +244,7 @@
 </head>
 <body>
     <nav class="navbar">
-      <div class="nav-container">
+      <div class="navbar-inner">
         <a href="index.html" class="logo-box">
           <img src="img/arkalogo.jpeg" alt="Arkaworld Logo" class="logo">
           <span class="logo-text">Arka<span class="logo-o">world</span>™</span>
@@ -661,7 +665,7 @@
         </div>
 
         <!-- NAVIGATION -->
-        <div class="nav-links">
+        <div class="faq-footer-nav">
             <a href="index.html">← Home</a>
             <a href="products.html">Products</a>
             <a href="about.html">About</a>
