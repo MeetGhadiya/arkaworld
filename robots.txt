@@ -1,0 +1,31 @@
+# Arkaworld™ robots.txt - SEO & Web Crawling Rules
+
+# Allow all bots
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Crawl delay (in seconds)
+Crawl-delay: 1
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://arkaworld26.com/sitemap.xml
+
+# Avoid crawling certain files
+User-agent: *
+Disallow: /?*
+Disallow: /search?
+Disallow: /cart
+Disallow: /checkout

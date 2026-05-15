@@ -1,478 +1,496 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ═══ ESSENTIAL META TAGS ═══ -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title id="pageTitle">Arkaworld™ — Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" id="metaDescription" content="Detailed specifications for wholesale LiFePO4 batteries. Certified quality, fast shipping. Get competitive pricing from Arkaworld™.">
+  <meta name="keywords" id="metaKeywords" content="LiFePO4 battery, battery specifications, wholesale pricing, battery details">
+  <meta name="author" content="Arkaworld™">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="theme-color" content="#0e1012">
+  
+  <!-- ═══ GEO-LOCATION META TAGS ═══ -->
+  <meta name="geo.placename" content="India">
+  <meta name="geo.region" content="IN">
+  <meta name="ICBM" content="20.5937, 78.9629">
+  
+  <!-- ═══ OPEN GRAPH (Social Media) ═══ -->
+  <meta property="og:title" id="ogTitle" content="Product Details | Arkaworld™">
+  <meta property="og:type" content="product">
+  <meta property="og:url" id="ogUrl" content="https://arkaworld26.com/product-detail.html">
+  <meta property="og:image" id="ogImage" content="">
+  <meta property="og:description" id="ogDesc" content="High-quality LiFePO4 battery with certified specifications">
+  <meta property="og:site_name" content="Arkaworld™">
+  <meta property="og:locale" content="en_IN">
+  
+  <!-- ═══ TWITTER CARD ═══ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" id="twitterTitle" content="Product Details | Arkaworld™">
+  <meta name="twitter:description" id="twitterDesc" content="Premium LiFePO4 battery specifications and pricing">
+  <meta name="twitter:image" id="twitterImage" content="">
+  
+  <!-- ═══ CANONICAL & LINKS ═══ -->
+  <link rel="canonical" id="canonical" href="https://arkaworld26.com/product-detail.html">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="manifest" href="manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <title id="pageTitle">Arkaworld™ — Product Details</title>
   <style>
-    .product-detail-page {
-      min-height: 100vh;
-      background: var(--dark);
-      color: var(--text);
-      padding: 40px 20px;
-    }
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0e1012;font-family:'Barlow',sans-serif;color:#e8e8e8}
 
-    .product-detail-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+.pg{max-width:1060px;margin:0 auto;padding:28px 28px 64px}
 
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--blue);
-      text-decoration: none;
-      font-weight: 600;
-      margin-bottom: 40px;
-      transition: gap 0.3s ease;
-    }
+.back{display:inline-flex;align-items:center;gap:7px;color:#888;font-size:11px;font-weight:700;text-decoration:none;margin-bottom:20px;letter-spacing:.8px;text-transform:uppercase;transition:color .2s}
+.back:hover{color:#3dd900}
 
-    .back-link:hover {
-      gap: 12px;
-    }
+.bc{display:flex;align-items:center;gap:6px;margin-bottom:28px}
+.bc a{font-size:11px;color:#888;text-decoration:none}
+.bc a:hover{color:#3dd900}
+.bc span{font-size:11px;color:#777}
+.bc .cur{color:#999}
 
-    .product-detail-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      margin-bottom: 60px;
-    }
+.main{display:grid;grid-template-columns:1fr 1.05fr;gap:36px;margin-bottom:36px;align-items:start}
 
-    @media (max-width: 768px) {
-      .product-detail-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-    }
+.img-main-wrap{
+  position:relative;width:100%;
+  aspect-ratio:4/3;
+  background:#0c1014;
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:14px;
+  overflow:hidden;
+  margin-bottom:10px;
+}
+.img-main-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+.img-ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:72px;opacity:.18}
+.img-chemistry{
+  position:absolute;bottom:12px;left:12px;
+  background:rgba(0,0,0,.78);color:#3dd900;
+  font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
+  padding:3px 9px;border-radius:4px;border:1px solid rgba(61,217,0,.2)
+}
+.img-tag-pop{position:absolute;top:12px;right:12px;background:#e85d2a;color:#fff;font-size:8px;font-weight:900;letter-spacing:.8px;text-transform:uppercase;padding:3px 8px;border-radius:4px;display:none}
 
-    .product-detail-image {
-      width: 100%;
-      height: 400px;
-      background: var(--dark2);
-      border-radius: 8px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+.thumbs{display:flex;gap:8px}
+.thumb{
+  flex:1;aspect-ratio:4/3;
+  background:#0c1014;border:1px solid rgba(255,255,255,.06);
+  border-radius:8px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;opacity:.35;transition:all .2s;overflow:hidden;
+}
+.thumb.active{border-color:rgba(61,217,0,.4);opacity:1}
+.thumb:hover:not(.active){border-color:rgba(61,217,0,.2);opacity:.65}
 
-    .product-detail-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.info-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.badge{background:rgba(61,217,0,.08);color:#3dd900;border:1px solid rgba(61,217,0,.17);border-radius:5px;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;padding:2px 8px}
+.brand{font-size:10px;color:#999;font-weight:700;letter-spacing:.8px;text-transform:uppercase}
 
-    .product-detail-content h1 {
-      font-family: "Barlow Condensed", sans-serif;
-      font-size: 48px;
-      font-weight: 900;
-      margin: 0 0 20px 0;
-      background: linear-gradient(90deg, #0077CC, #00BFA5, #3DD900);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+.prod-name{font-family:'Barlow Condensed',sans-serif;font-size:34px;font-weight:900;line-height:1.05;letter-spacing:-.2px;color:#f0f0f0;margin-bottom:6px}
+.prod-spec{font-size:11px;color:#3dd900;font-weight:700;margin-bottom:14px;letter-spacing:.3px}
+.prod-desc{font-size:13px;color:#aaa;line-height:1.82;margin-bottom:18px}
 
-    .product-detail-badge {
-      display: inline-block;
-      background: var(--green);
-      color: var(--dark);
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 12px;
-      letter-spacing: 1px;
-      margin-bottom: 20px;
-    }
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.chip{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:5px;font-size:10px;color:#999;padding:4px 10px;font-weight:600}
 
-    .product-detail-brand {
-      font-size: 14px;
-      color: #888;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      margin-bottom: 20px;
-    }
+.price-box{background:#111316;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:13px 16px;display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.price-lbl{font-size:10px;color:#999;text-transform:uppercase;letter-spacing:.8px;margin-bottom:3px}
+.price-val{font-size:16px;color:#3dd900;font-weight:800}
+.price-note{font-size:10px;color:#999;text-align:right;line-height:1.6}
 
-    .product-detail-price {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--green);
-      margin-bottom: 30px;
-    }
+.cta-two{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.btn-g{background:#3dd900;color:#0e1012;border:none;padding:13px;border-radius:9px;font-size:13px;font-weight:800;cursor:pointer;font-family:inherit;text-decoration:none;text-align:center;display:block;transition:opacity .2s}
+.btn-g:hover{opacity:.86}
+.btn-w{background:rgba(61,217,0,.09);color:#3dd900;border:1px solid rgba(61,217,0,.2);padding:13px;border-radius:9px;font-size:13px;font-weight:800;text-decoration:none;text-align:center;display:block;transition:background .2s}
+.btn-w:hover{background:rgba(61,217,0,.16)}
+.btn-c{background:transparent;color:#aaa;border:1px solid rgba(255,255,255,.08);padding:10px;border-radius:9px;font-size:12px;font-weight:600;text-decoration:none;text-align:center;display:block;grid-column:span 2;transition:border-color .2s}
+.btn-c:hover{border-color:rgba(255,255,255,.18)}
 
-    .product-detail-description {
-      font-size: 16px;
-      line-height: 1.8;
-      color: var(--text-muted);
-      margin-bottom: 40px;
-    }
+.trust{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.trust span{font-size:10px;color:#999;display:flex;align-items:center;gap:4px}
+.trust span::before{content:'✓';color:#3dd900;font-weight:800}
 
-    .product-specs-section {
-      background: var(--dark2);
-      padding: 30px;
-      border-radius: 12px;
-      margin-bottom: 40px;
-    }
+.tabs{margin-bottom:36px}
+.tab-nav{display:flex;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:22px}
+.tb{background:none;border:none;padding:10px 16px;font-size:11px;font-weight:700;color:#888;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;font-family:inherit;letter-spacing:.8px;text-transform:uppercase;transition:color .2s}
+.tb.on{color:#3dd900;border-bottom-color:#3dd900}
+.tb:hover:not(.on){color:#aaa}
+.tp{display:none}
+.tp.on{display:block}
 
-    .product-specs-section h3 {
-      font-family: "Barlow Condensed", sans-serif;
-      font-size: 24px;
-      font-weight: 700;
-      margin: 0 0 20px 0;
-      color: var(--text);
-    }
+.st{width:100%;border-collapse:collapse;border-radius:10px;overflow:hidden}
+.st tr{border-bottom:1px solid rgba(255,255,255,.04)}
+.st tr:last-child{border:none}
+.st td{padding:11px 14px;font-size:13px;vertical-align:middle}
+.st td:first-child{font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:.8px;width:36%;background:#111316}
+.st td:last-child{color:#ccc;background:#0e1012}
+.st tr:nth-child(even) td:last-child{background:#0a0d0f}
+.st tr:nth-child(even) td:first-child{background:#111316}
 
-    .specs-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
+.feat-g{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.fc{background:#111316;border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:14px;display:flex;gap:12px}
+.fi{width:30px;height:30px;flex-shrink:0;background:rgba(61,217,0,.06);border:1px solid rgba(61,217,0,.13);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13px}
+.ft{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:800;color:#bbb;margin-bottom:3px}
+.fd{font-size:11px;color:#999;line-height:1.6}
 
-    @media (max-width: 768px) {
-      .specs-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+.rel-head{font-size:10px;color:#3dd900;text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-bottom:14px}
+.rel-g{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.rc{background:#111316;border:1px solid rgba(61,217,0,.15);border-radius:11px;overflow:hidden;cursor:pointer;transition:border-color .22s,transform .22s}
+.rc:hover{border-color:rgba(61,217,0,.35);transform:translateY(-2px);box-shadow:0 8px 20px rgba(61,217,0,.08)}
+.rc-img{width:100%;aspect-ratio:4/3;background:#0c1014;display:flex;align-items:center;justify-content:center;font-size:24px;border-bottom:1px solid rgba(255,255,255,.05);position:relative}
+.rc-img::before{content:'🔋';position:absolute;opacity:.15}
+.rc-img img{width:100%;height:100%;object-fit:cover;display:block;opacity:1}
+.rc-body{padding:10px 11px;background:linear-gradient(135deg, #111316 0%, #0f1113 100%)}
+.rc-badge{font-size:8px;color:#3dd900;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px;background:rgba(61,217,0,.08);padding:3px 6px;border-radius:3px;display:inline-block}
+.rc-name{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:800;color:#ddd;margin-bottom:3px;line-height:1.2}
+.rc-spec{font-size:9px;color:#aaa;margin-bottom:8px;line-height:1.5}
+.rc-btn{width:100%;background:rgba(61,217,0,.12);color:#3dd900;border:1px solid rgba(61,217,0,.25);padding:5px;border-radius:5px;font-size:10px;font-weight:800;cursor:pointer;font-family:inherit;transition:all .2s}
+.rc-btn:hover{background:rgba(61,217,0,.2);border-color:rgba(61,217,0,.35)}
 
-    .spec-item {
-      display: flex;
-      flex-direction: column;
-    }
+@media(max-width:900px){
+  .main{grid-template-columns:1fr;gap:24px}
+  .rel-g{grid-template-columns:repeat(2,1fr)}
+  .feat-g{grid-template-columns:1fr}
+}
 
-    .spec-label {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      color: var(--blue);
-      margin-bottom: 6px;
-      text-transform: uppercase;
-    }
+@media(max-width:768px){
+  .pg{padding:20px 16px 50px}
+  .back{font-size:10px;margin-bottom:16px}
+  .bc{margin-bottom:20px}
+  .prod-name{font-size:28px}
+  .cta-two{grid-template-columns:1fr;gap:8px}
+  .btn-c{grid-column:span 1}
+  .rel-g{grid-template-columns:1fr}
+  .feat-g{grid-template-columns:1fr}
+  .st{font-size:12px}
+  .st td{padding:9px 12px}
+  .st td:first-child{font-size:9px}
+  .cta-two{margin-bottom:8px}
+  .trust{gap:8px}
+  .trust span{font-size:9px}
+  .price-box{padding:10px 14px}
+  .price-val{font-size:14px}
+}
 
-    .spec-value {
-      font-size: 16px;
-      color: var(--text);
-      font-weight: 500;
+@media(max-width:640px){
+  .pg{padding:16px 14px 40px}
+  .prod-name{font-size:24px;margin-bottom:4px}
+  .back{font-size:9px}
+  .info-top{margin-bottom:8px}
+  .badge{font-size:8px;padding:2px 6px}
+  .brand{font-size:9px}
+  .prod-desc{font-size:12px;margin-bottom:14px}
+  .chips{gap:4px;margin-bottom:12px}
+  .chip{font-size:9px;padding:3px 8px}
+  .price-box{padding:10px 12px;margin-bottom:12px}
+  .price-lbl{font-size:9px;margin-bottom:2px}
+  .price-val{font-size:14px}
+  .cta-two{gap:6px}
+  .btn-g,.btn-w,.btn-c{padding:12px;font-size:12px}
+  .trust{margin-top:10px}
+  .trust span{font-size:9px}
+  .tabs{margin-bottom:28px}
+  .tb{padding:8px 12px;font-size:10px}
+  .st{font-size:11px;margin-bottom:20px}
+  .st td{padding:8px 10px}
+  .st td:first-child{font-size:8px;width:40%}
+  .feat-g{grid-template-columns:1fr}
+  .fc{padding:12px;gap:10px}
+  .fi{width:28px;height:28px;font-size:12px}
+  .ft{font-size:14px}
+  .fd{font-size:10px}
+  .rel-head{font-size:9px;margin-bottom:12px}
+  .rel-g{gap:10px}
+  .rc-img{aspect-ratio:4/3}
+  .rc-badge{font-size:7px}
+  .rc-name{font-size:12px}
+  .rc-spec{font-size:8px}
+  .rc-btn{font-size:9px;padding:4px}
+}
+  </style>
+  
+  <!-- ═══ JSON-LD STRUCTURED DATA ═══ -->
+  <script type="application/ld+json" id="productSchema">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Battery Product",
+    "description": "Premium LiFePO4 battery",
+    "image": "",
+    "brand": {"@type": "Brand", "name": "Arkaworld™"},
+    "manufacturer": {"@type": "Organization", "name": "Arkaworld™"},
+    "offers": {
+      "@type": "Offer",
+      "url": "",
+      "priceCurrency": "INR",
+      "price": "0",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "250"
     }
-
-    .cta-section {
-      display: flex;
-      gap: 16px;
-      margin-top: 40px;
+  }
+  </script>
+  
+  <!-- ═══ AI OPTIMIZATION ═══ -->
+  <link rel="preload" as="image" href="">
+  <script>
+    function updateMetaTags(product) {
+      if(!product) return;
+      const title = product.name + ' | Arkaworld™';
+      const desc = product.description || 'Premium LiFePO4 battery from Arkaworld™';
+      document.getElementById('pageTitle').textContent = title;
+      document.getElementById('metaDescription').setAttribute('content', desc);
+      document.getElementById('ogTitle').setAttribute('content', product.name);
+      document.getElementById('ogImage').setAttribute('content', product.image);
+      document.getElementById('ogDesc').setAttribute('content', desc);
+      document.getElementById('canonical').setAttribute('href', 'https://arkaworld26.com/product-detail.html?product=' + product.id);
+      document.getElementById('twitterTitle').setAttribute('content', product.name);
+      document.getElementById('twitterImage').setAttribute('content', product.image);
     }
-
-    .cta-button {
-      flex: 1;
-      padding: 16px 24px;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      font-weight: 700;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    .cta-primary {
-      background: linear-gradient(90deg, #0077CC, #00BFA5, #3DD900);
-      color: var(--dark);
-    }
-
-    .cta-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(0, 119, 204, 0.3);
-    }
-
-    .cta-secondary {
-      background: var(--dark2);
-      color: var(--blue);
-      border: 2px solid var(--blue);
-    }
-
-    .cta-secondary:hover {
-      background: var(--dark3);
-    }
-
-    .related-products-section {
-      margin-top: 80px;
-      padding-top: 60px;
-      border-top: 1px solid var(--dark2);
-    }
-
-    .related-products-section h2 {
-      font-family: "Barlow Condensed", sans-serif;
-      font-size: 36px;
-      font-weight: 900;
-      margin: 0 0 40px 0;
-    }
-
-    .related-products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 24px;
-    }
-
-    .product-card-mini {
-      background: var(--dark2);
-      border-radius: 8px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      padding: 16px;
-    }
-
-    .product-card-mini:hover {
-      background: var(--dark3);
-      transform: translateY(-4px);
-    }
-
-    .product-card-mini-img {
-      display: none;
-    }
-
-    .product-card-mini-name {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 8px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .product-card-mini-spec {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-      line-height: 1.4;
-    }
-
-    .product-card-mini-btn {
-      width: 100%;
-      padding: 8px;
-      background: var(--green);
-      color: var(--dark);
-      border: none;
-      border-radius: 4px;
-      font-weight: 600;
-      font-size: 12px;
-      cursor: pointer;
-      text-decoration: none;
-      display: block;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    .product-card-mini-btn:hover {
-      transform: scale(1.05);
-    }
-
-    .product-not-found {
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .product-not-found h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-
-    .product-not-found p {
-      color: var(--text-muted);
-      margin-bottom: 30px;
-    }
+  </script>
   </style>
 </head>
 <body>
-  <div class="product-detail-page">
-    <div class="product-detail-container">
-      <a href="products.html" class="back-link">← Back to Catalogue</a>
-      
-      <div id="product-content">
-        <!-- Will be populated by JavaScript -->
+  <div class="pg" id="page">
+    <a href="products.html" class="back">← Back to Products</a>
+    
+    <div class="bc">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <a href="products.html">Products</a>
+      <span>/</span>
+      <span id="bcCat" class="cur">Product</span>
+    </div>
+
+    <div class="main">
+      <div class="img-side">
+        <div class="img-main-wrap">
+          <img id="mainImg" src="" alt="">
+          <div id="chemTag" class="img-chemistry"></div>
+        </div>
+        <div class="thumbs" id="thumbs"></div>
       </div>
+
+      <div class="info-side">
+        <div class="info-top">
+          <div id="badgeTag" class="badge"></div>
+          <div id="brandTag" class="brand"></div>
+        </div>
+        <h1 class="prod-name" id="prodName"></h1>
+        <div class="prod-spec" id="prodSpec"></div>
+        <p class="prod-desc" id="prodDesc"></p>
+        
+        <div class="chips" id="chips"></div>
+
+        <div class="price-box">
+          <div>
+            <div class="price-lbl">Price</div>
+            <div class="price-val" id="priceVal"></div>
+          </div>
+          <div class="price-note">
+            <div>Contact us for</div>
+            <div>bulk orders</div>
+          </div>
+        </div>
+
+        <div class="cta-two">
+          <button class="btn-g" onclick="location.href='contact.html'">Get Quote</button>
+          <a href="https://wa.me/message/ARKAWORLD" class="btn-w">WhatsApp</a>
+        </div>
+
+        <div class="trust">
+          <span>Certified supplier</span>
+          <span>Fast shipping</span>
+          <span>Quality guaranteed</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <div class="tab-nav">
+        <button class="tb on" onclick="tabClick(0)">Specifications</button>
+        <button class="tb" onclick="tabClick(1)">Features</button>
+      </div>
+
+      <div class="tp on" id="tab0">
+        <table class="st" id="specsTable"></table>
+      </div>
+
+      <div class="tp" id="tab1">
+        <div class="feat-g" id="featuresGrid"></div>
+      </div>
+    </div>
+
+    <div id="relProdSection" style="display:none;">
+      <h2 class="rel-head">Related Products</h2>
+      <div class="rel-g" id="relProd"></div>
     </div>
   </div>
 
   <script>
-    // Get product ID from URL parameter
+let products = [];
+let currentProduct = null;
+let relatedProducts = [];
+
+async function init() {
+  try {
+    const res = await fetch('data/products.json');
+    const data = await res.json();
+    products = data.products;
+    
     const params = new URLSearchParams(window.location.search);
-    const productId = params.get('product');
+    const pid = params.get('product') || params.get('id');
+    
+    if (!pid) {
+      document.getElementById('page').innerHTML = '<div style="text-align:center;padding:60px 20px;"><h2>Product not found</h2><p>Please select a product from the catalog.</p><a href="products.html" style="color:#3dd900;text-decoration:none;">Back to products</a></div>';
+      return;
+    }
+    
+    currentProduct = products.find(p => p.id === pid);
+    if (!currentProduct) {
+      document.getElementById('page').innerHTML = '<div style="text-align:center;padding:60px 20px;"><h2>Product not found</h2><a href="products.html" style="color:#3dd900;text-decoration:none;">Back to products</a></div>';
+      return;
+    }
+    
+    document.title = `${currentProduct.name} | Arkaworld™`;
+    updateMetaTags(currentProduct);
+    renderProduct();
+    renderRelated();
+  } catch (e) {
+    console.error(e);
+  }
+}
 
-    const productContent = document.getElementById('product-content');
+function renderProduct() {
+  const p = currentProduct;
+  
+  document.getElementById('pageTitle').textContent = `${p.name} | Arkaworld™`;
+  document.getElementById('badgeTag').textContent = p.badge || 'FEATURED';
+  document.getElementById('brandTag').textContent = p.brand || 'ARKAWORLD';
+  document.getElementById('bcCat').textContent = p.category.toUpperCase();
+  document.getElementById('prodName').textContent = p.name;
+  document.getElementById('prodSpec').textContent = (p.details?.voltage ? `${p.details.voltage} | ` : '') + (p.details?.capacity ? `${p.details.capacity}` : '');
+  document.getElementById('prodDesc').textContent = p.description;
+  document.getElementById('mainImg').src = p.image;
+  document.getElementById('mainImg').alt = p.name;
+  document.getElementById('priceVal').textContent = p.price || 'Call for price';
+  
+  if (p.details?.chemistry) {
+    document.getElementById('chemTag').textContent = p.details.chemistry;
+  }
 
-    // Comprehensive fallback product database for products shown in products.html
-    const fallbackProducts = {
-      'standard-mf-12v-25-5ah': { id: 'standard-mf-12v-25-5ah', name: 'Standard MF 12V 2.5-5Ah', category: 'bike', badge: 'Standard MF', brand: 'EXIDE • AMARON', image: 'img/standard-mf-12v-25-5ah.png', specs: '12V • 2.5-5Ah • MF Sealed • 2-3 Years Life', price: 'Wholesale / On Enquiry', description: 'Sealed maintenance-free battery for 100cc–150cc motorcycles and scooters. Compatible with Hero Splendor, Honda Activa, Bajaj, TVS. Zero maintenance. Ready to install, pre-charged.', details: { voltage: '12V', capacity: '2.5-5Ah', type: 'MF Sealed', lifespan: '2-3 Years', maintenance: 'Zero' } },
-      'high-cca-12v-7ah-agm': { id: 'high-cca-12v-7ah-agm', name: 'High CCA 12V 7Ah AGM', category: 'bike', badge: 'High CCA', brand: 'AMARON • SF SONIC', image: 'img/high-cca-12v-7ah-agm.png', specs: '12V • 7Ah • AGM • 100A CCA • 2-4 Years', price: 'Wholesale / On Enquiry', description: 'Engineered for automatic scooters needing instant starts. AGM technology handles stop-start city traffic. Superior cold cranking for reliable ignition in all weather. Overcharge tolerant.', details: { voltage: '12V', capacity: '7Ah', technology: 'AGM', cca: '100A', lifespan: '2-4 Years' } },
-      'performance-agm-12v-9ah': { id: 'performance-agm-12v-9ah', name: 'Performance AGM 12V 9Ah', category: 'bike', badge: 'Performance', brand: 'EXIDE • LIVGUARD', image: 'img/performance-agm-12v-9ah.png', specs: '12V • 9Ah • AGM • 130A CCA • 3-5 Years', price: 'Wholesale / On Enquiry', description: 'Built for 200cc–250cc high-performance bikes (Pulsar, Royal Enfield, KTM, Yamaha). Vibration-proof plates. Low self-discharge for long storage. Handles hard acceleration seamlessly.', details: { voltage: '12V', capacity: '9Ah', technology: 'AGM', cca: '130A', lifespan: '3-5 Years' } },
-      'exide-xplore-bike-25ah': { id: 'exide-xplore-bike-25ah', name: 'Xplore 2.5Ah', category: 'bike', badge: 'MF Sealed', brand: 'EXIDE', image: 'img/exide-xplore-bike-25ah.png', specs: '12V • 2.5Ah • MF', price: 'Wholesale / On Enquiry', description: 'For 100cc–125cc bikes. Suits Honda Activa, Hero Splendor. Maintenance-free sealed design.', details: { voltage: '12V', capacity: '2.5Ah', type: 'MF', bikes: '100-125cc' } },
-      'amaron-pro-bike-5ah': { id: 'amaron-pro-bike-5ah', name: 'Pro Bike 5Ah', category: 'bike', badge: 'High CCA', brand: 'AMARON', image: 'img/amaron-pro-bike-5ah.png', specs: '12V • 5Ah • MF', price: 'Wholesale / On Enquiry', description: 'For 150cc–220cc bikes. ProR technology for long shelf life and superior cold-start performance.', details: { voltage: '12V', capacity: '5Ah', type: 'MF', bikes: '150-220cc' } },
-      'sf-sonic-flash-9ah': { id: 'sf-sonic-flash-9ah', name: 'Flash 9Ah', category: 'bike', badge: 'Heavy Duty', brand: 'SF SONIC', image: 'img/sf-sonic-flash-9ah.png', specs: '12V • 9Ah • MF', price: 'Wholesale / On Enquiry', description: 'For 200cc+ bikes with electric start. Extra reserve capacity for demanding applications.', details: { voltage: '12V', capacity: '9Ah', type: 'MF', bikes: '200cc+' } },
-      'hatchback-smf-12v-35ah': { id: 'hatchback-smf-12v-35ah', name: 'Hatchback SMF 12V 35Ah', category: 'car', badge: 'Hatchback Grade', brand: 'EXIDE • AMARON', image: 'img/hatchback-smf-12v-35ah.png', specs: '12V • 35Ah • SMF • 300A CCA • 3-4 Years', price: 'Wholesale / On Enquiry', description: 'Ideal for Maruti Alto, Swift, WagonR. Sealed maintenance-free with spill-proof design. Reliable start even in peak summer heat. 55 min reserve capacity for city stop-start driving.', details: { voltage: '12V', capacity: '35Ah', type: 'SMF', cca: '300A', lifespan: '3-4 Years' } },
-      'sedan-smf-12v-55ah': { id: 'sedan-smf-12v-55ah', name: 'Sedan SMF 12V 55Ah', category: 'car', badge: 'Sedan Class', brand: 'AMARON • LIVGUARD', image: 'img/sedan-smf-12v-55ah.png', specs: '12V • 55Ah • SMF • 450A CCA • 3-5 Years', price: 'Wholesale / On Enquiry', description: 'Perfect for Honda City, Hyundai Verna, Maruti Ciaz. Handles modern car electrical loads (AC, infotainment, powered accessories). Heat Guard technology engineered for Indian summers. 90 min reserve capacity.', details: { voltage: '12V', capacity: '55Ah', type: 'SMF', cca: '450A', lifespan: '3-5 Years' } },
-      'suv-agm-12v-75-100ah': { id: 'suv-agm-12v-75-100ah', name: 'SUV AGM 12V 75-100Ah', category: 'car', badge: 'SUV/MUV', brand: 'EXIDE • BASE', image: 'img/suv-agm-12v-75-100ah.png', specs: '12V • 75-100Ah • AGM • 700A CCA • 4-6 Years', price: 'Wholesale / On Enquiry', description: 'Engineered for Toyota Fortuner, Tata Safari, Mahindra XUV700. Stop-start compatible. Handles heavy electrical loads (sunroof, 360° cameras, rear HVAC). AGM technology for 3× more cycles. 140-180 min reserve capacity.', details: { voltage: '12V', capacity: '75-100Ah', technology: 'AGM', cca: '700A', lifespan: '4-6 Years' } },
-      'diesel-heavy-duty-12v-100ah': { id: 'diesel-heavy-duty-12v-100ah', name: 'Diesel Heavy Duty 12V 100Ah', category: 'car', badge: 'Diesel HD', brand: 'EXIDE • SF SONIC', image: 'img/diesel-heavy-duty-12v-100ah.png', specs: '12V • 100Ah • SMF • 800A CCA • 4-5 Years', price: 'Wholesale / On Enquiry', description: 'Built for diesel engine compression starting. Tata Fortuner Diesel, Scorpio Diesel, commercial vehicles, taxis. Industry-leading 800A CCA. 180 min reserve capacity. Corrosion-resistant terminals for coastal areas.', details: { voltage: '12V', capacity: '100Ah', type: 'SMF', cca: '800A', lifespan: '4-5 Years' } },
-      '6v-100ah-deep-cycle-pack': { id: '6v-100ah-deep-cycle-pack', name: '6V×4 Pack (24V 100Ah)', category: 'rickshaw', badge: 'Standard', brand: 'EXIDE • OKAYA', image: 'img/6v-100ah-deep-cycle-pack.png', specs: '6V • 100Ah • 4-piece • 24V System • 1200+ Cycles', price: 'Wholesale / On Enquiry', description: 'Standard e-rickshaw (3-seater+driver). Deep-cycle tubular plates. 80-100 km range per charge. Robust terminals handle 3-wheeler vibration. Compatible with most chargers. Set of 4 matched batteries.', details: { voltage: '6V', capacity: '100Ah', system: '24V (4-piece)', cycles: '1200+', range: '80-100 km' } },
-      '8v-150ah-high-capacity-pack': { id: '8v-150ah-high-capacity-pack', name: '8V×4 Pack (32V 150Ah)', category: 'rickshaw', badge: 'High Capacity', brand: 'AMARON • LUMINOUS', image: 'img/8v-150ah-high-capacity-pack.png', specs: '8V • 150Ah • 4-piece • 32V System • 1200+ Cycles', price: 'Wholesale / On Enquiry', description: 'Heavy-load e-rickshaws (5-6 passenger). 32V high-power motor compatibility. 120-140 km extended range. Enhanced tubular plates for heavy daily use. Rural long-distance & double-shift operations. Semi-sealed for low maintenance.', details: { voltage: '8V', capacity: '150Ah', system: '32V (4-piece)', cycles: '1200+', range: '120-140 km' } },
-      '12v-200ah-cargo-loader': { id: '12v-200ah-cargo-loader', name: 'E-Cart Cargo 12V 200Ah', category: 'rickshaw', badge: 'Cargo HD', brand: 'EXIDE • BASE', image: 'img/12v-200ah-cargo-loader.png', specs: '12V • 200Ah • Deep Cycle • 1000+ Cycles', price: 'Wholesale / On Enquiry', description: 'Electric cargo loaders & delivery e-carts. Sustains high discharge rates under full load. Multi-shift commercial operations (3+ years daily use). Heavy-gauge cable terminals. Rugged polypropylene case. Warehouse pallet movers & last-mile logistics.', details: { voltage: '12V', capacity: '200Ah', type: 'Deep Cycle', cycles: '1000+', applications: 'Cargo' } },
-      'rickshaw-51v-100ah-lith': { id: 'rickshaw-51v-100ah-lith', name: '51.2V 100Ah LiFePO4', category: 'rickshaw', badge: 'Lithium', brand: 'OKAYA EV', image: 'img/rickshaw-51v-100ah-lith.png', specs: '51.2V • 100Ah • 5.12kWh • 2000+ Cycles • 42 kg', price: 'Wholesale / On Enquiry', description: 'Direct upgrade from lead-acid. Drop-in compatible. 100-120 km range. 3-4 hour fast charge. 60% lighter. Smart BMS. Zero maintenance. 5+ year lifespan. 80% DoD usable.', details: { voltage: '51.2V', capacity: '100Ah', energy: '5.12kWh', chemistry: 'LiFePO4', cycles: '2000+', range: '100-120 km' } },
-      'rickshaw-60v-100ah-lith': { id: 'rickshaw-60v-100ah-lith', name: '60.8V 100Ah LiFePO4', category: 'rickshaw', badge: 'High Power', brand: 'TRONTEK', image: 'img/rickshaw-60v-100ah-lith.png', specs: '60.8V • 100Ah • 6.08kWh • 2000+ Cycles • 45 kg', price: 'Wholesale / On Enquiry', description: 'High-voltage system for powerful e-rickshaws. Extended 120-140 km range. 2-3 hour fast charge. Universal controller compatibility. Smart BMS with app monitoring. 5+ years daily use.', details: { voltage: '60.8V', capacity: '100Ah', energy: '6.08kWh', chemistry: 'LiFePO4', cycles: '2000+', range: '120-140 km' } },
-      'rickshaw-73v-100ah-lith': { id: 'rickshaw-73v-100ah-lith', name: '73.6V 100Ah LiFePO4', category: 'rickshaw', badge: 'Premium', brand: 'OKAYA EV', image: 'img/rickshaw-73v-100ah-lith.png', specs: '73.6V • 100Ah • 7.36kWh • 2000+ Cycles • 48 kg', price: 'Wholesale / On Enquiry', description: 'Premium long-range. 140-160 km extended range on single charge. 2-3 hour charge time. IP65 weatherproof. Remote monitoring capable. Twin battery system scalable. 5+ year lifespan.', details: { voltage: '73.6V', capacity: '100Ah', energy: '7.36kWh', chemistry: 'LiFePO4', cycles: '2000+', range: '140-160 km' } },
-      'rickshaw-51v-200ah-lith': { id: 'rickshaw-51v-200ah-lith', name: '51.2V 200Ah LiFePO4', category: 'rickshaw', badge: 'HC', brand: 'EXIDE LIVO', image: 'img/rickshaw-51v-200ah-lith.png', specs: '51.2V • 200Ah • 10.24kWh • 2000+ Cycles • 82 kg', price: 'Wholesale / On Enquiry', description: 'High-capacity fleet solution. 150+ km guaranteed range. Multi-shift operations (24-hour turnover). Scalable dual-battery setup. Smart BMS. Heavy-duty for commercial fleets. 5+ year warranty available.', details: { voltage: '51.2V', capacity: '200Ah', energy: '10.24kWh', chemistry: 'LiFePO4', cycles: '2000+', range: '150+ km' } },
-      'rickshaw-60v-200ah-lith': { id: 'rickshaw-60v-200ah-lith', name: '60.8V 200Ah LiFePO4', category: 'rickshaw', badge: 'UHC', brand: 'TRONTEK', image: 'img/rickshaw-60v-200ah-lith.png', specs: '60.8V • 200Ah • 12.16kWh • 2000+ Cycles • 90 kg', price: 'Wholesale / On Enquiry', description: 'Ultra-high capacity for peak demand. 160-180 km assured range. 24/7 fleet operations. Multiple charging stations setup. Remote fleet monitoring available. Enterprise-grade BMS.', details: { voltage: '60.8V', capacity: '200Ah', energy: '12.16kWh', chemistry: 'LiFePO4', cycles: '2000+', range: '160-180 km' } },
-      'rickshaw-48v-200ah-lith': { id: 'rickshaw-48v-200ah-lith', name: 'E-Rickshaw LiFePO4 48V 200Ah', category: 'rickshaw', badge: 'Fleet Grade', brand: 'OEM LiFePO4', image: 'img/rickshaw-48v-200ah-lith.png', specs: '48V • 200Ah • 9600Wh • 200+km • RS485 · 3yr Warranty', price: 'Wholesale / On Enquiry', description: 'High-capacity fleet-grade pack for double-shift operations. RS485 BMS, IP65, auto balancing. 2000+ cycles. Cargo and passenger e-rickshaws. 200+ km per charge guaranteed.', details: { voltage: '48V', capacity: '200Ah', energy: '9600Wh', chemistry: 'LiFePO4', cycles: '2000+', range: '200+ km' } },
-      '48v-20ah-lfp': { id: '48v-20ah-lfp', name: '48V 20Ah LiFePO4', category: 'ev', badge: 'Entry LFP', brand: 'OKAYA EV', image: 'img/48v-20ah-lfp.png', specs: '48V • 20Ah • 960Wh • LFP • 1500+ Cycles', price: 'Wholesale / On Enquiry', description: 'Entry-level & mid-range e-scooters. 60-80 km range per charge. Smart BMS with multi-protection (overcharge, overcurrent, thermal). 4-5 hour standard charge / 2 hour fast charge. 8-10 kg lightweight. Plug & Play standard connector.', details: { voltage: '48V', capacity: '20Ah', energy: '960Wh', chemistry: 'LiFePO4', cycles: '1500+', range: '60-80 km' } },
-      '60v-30ah-lfp': { id: '60v-30ah-lfp', name: '60V 30Ah LiFePO4', category: 'ev', badge: 'Mid LFP', brand: 'EXIDE LIVO', image: 'img/60v-30ah-lfp.png', specs: '60V • 30Ah • 1800Wh • LFP • 1500+ Cycles', price: 'Wholesale / On Enquiry', description: 'Most popular upgrade for dealers. ~100 km range per charge. Auto cell-balancing BMS. Bluetooth monitoring available (optional). IP65 weatherproof. Drop-in replacement for 60V lead-acid packs. 13-15 kg lightweight.', details: { voltage: '60V', capacity: '30Ah', energy: '1800Wh', chemistry: 'LiFePO4', cycles: '1500+', range: '~100 km' } },
-      '72v-30-40ah-nmc': { id: '72v-30-40ah-nmc', name: '72V 30-40Ah NMC/LFP', category: 'ev', badge: 'Performance', brand: 'TRONTEK', image: 'img/72v-30-40ah-nmc.png', specs: '72V • 30-40Ah • 2160-2880Wh • 1000-1500+ Cycles', price: 'Wholesale / On Enquiry', description: 'Speed-focused e-bikes & high-performance scooters. 130-150 km best-in-class range. Military-grade BMS. 3C peak discharge (120A). Bluetooth + CAN communication. Optional app monitoring. 18-22 kg. 4-6 hour charge time.', details: { voltage: '72V', capacity: '30-40Ah', energy: '2160-2880Wh', chemistry: 'NMC/LFP', cycles: '1000-1500+', range: '130-150 km' } },
-      '48-72v-e-rickshaw-lithium': { id: '48-72v-e-rickshaw-lithium', name: 'E-Rickshaw Lithium 48-72V', category: 'ev', badge: 'Rickshaw', brand: 'OKAYA EV', image: 'img/48-72v-e-rickshaw-lithium.png', specs: '48-72V • 40-60Ah • 1920-4320Wh • LFP • 2000+ Cycles', price: 'Wholesale / On Enquiry', description: 'Direct drop-in upgrade replacing heavy lead-acid packs. 60% lighter (20-28 kg vs 80+ kg). 100-130 km extended range. Zero maintenance. 3-4 hour fast recharge. 5+ years daily use. Universal fit most controllers. Smart BMS protection.', details: { voltage: '48-72V', capacity: '40-60Ah', energy: '1920-4320Wh', chemistry: 'LFP', cycles: '2000+', range: '100-130 km' } },
-      'ev-48v-27ah': { id: 'ev-48v-27ah', name: '48V 27Ah LFP', category: 'ev', badge: 'Trail', brand: 'OEM', image: 'img/ev-48v-27ah.png', specs: '48V • 27Ah • 1296Wh • LFP • 1500+ Cycles • 11.5 kg', price: 'Wholesale / On Enquiry', description: 'Perfect trail e-scooter. Guaranteed 60 km range. 3-4 hour charge. Standard 48V connector. IP65 weatherproof. Smart BMS. 3+ year lifespan.', details: { voltage: '48V', capacity: '27Ah', energy: '1296Wh', chemistry: 'LFP', cycles: '1500+', range: '60 km' } },
-      'ev-48v-40ah': { id: 'ev-48v-40ah', name: '48V 40Ah LFP', category: 'ev', badge: 'HC', brand: 'TRONTEK', image: 'img/ev-48v-40ah.png', specs: '48V • 40Ah • 1920Wh • LFP • 1500+ Cycles • 15.2 kg', price: 'Wholesale / On Enquiry', description: 'High-capacity 48V option. 80-100 km extended range. 4-5 hour charge. Dual battery compatible. Smart BMS with app. 3+ year warranty.', details: { voltage: '48V', capacity: '40Ah', energy: '1920Wh', chemistry: 'LFP', cycles: '1500+', range: '80-100 km' } },
-      'ev-60v-40ah': { id: 'ev-60v-40ah', name: '60V 40Ah LFP', category: 'ev', badge: 'Range+', brand: 'OKAYA EV', image: 'img/ev-60v-40ah.png', specs: '60V • 40Ah • 2400Wh • LFP • 1500+ Cycles • 18 kg', price: 'Wholesale / On Enquiry', description: 'Premium 60V performance. Guaranteed 100+ km range. 5-6 hour charge. Dual charging available. IP65+ rating. Bluetooth BMS. 4+ year lifespan.', details: { voltage: '60V', capacity: '40Ah', energy: '2400Wh', chemistry: 'LFP', cycles: '1500+', range: '100+ km' } },
-      'ev-60v-50ah': { id: 'ev-60v-50ah', name: '60V 50Ah LFP', category: 'ev', badge: 'UHC', brand: 'EXIDE LIVO', image: 'img/ev-60v-50ah.png', specs: '60V • 50Ah • 3000Wh • LFP • 1500+ Cycles • 22 kg', price: 'Wholesale / On Enquiry', description: 'Ultra-high capacity. 120-140 km single charge. 6-7 hour charge time. Heavy-duty scooters. Enterprise app monitoring. Warranty upgrade available.', details: { voltage: '60V', capacity: '50Ah', energy: '3000Wh', chemistry: 'LFP', cycles: '1500+', range: '120-140 km' } },
-      'ev-72v-40ah': { id: 'ev-72v-40ah', name: '72V 40Ah NMC/LFP', category: 'ev', badge: 'Performance', brand: 'TRONTEK', image: 'img/ev-72v-40ah.png', specs: '72V • 40Ah • 2880Wh • 1000-1500 Cycles • 20 kg', price: 'Wholesale / On Enquiry', description: 'Performance e-bikes & scooters. 150+ km extended range. 3C peak discharge. CAN communication ready. Dual battery stackable. Military-grade BMS. App monitoring included.', details: { voltage: '72V', capacity: '40Ah', energy: '2880Wh', chemistry: 'NMC/LFP', cycles: '1000-1500', range: '150+ km' } },
-      'flat-plate-12v-100ah': { id: 'flat-plate-12v-100ah', name: 'Flat Plate 12V 100Ah', category: 'inverter', badge: 'Entry Inverter', brand: 'LUMINOUS • MICROTEK', image: 'img/flat-plate-12v-100ah.png', specs: '12V • 100Ah • Flat Plate • 500-600 Cycles', price: 'Wholesale / On Enquiry', description: 'Entry-level home inverter battery. 3-4 hours backup (basic home load: 2 fans+5 LEDs). Compatible with all major inverter brands. Fast recharge 10-12 hours. Low-acid design reduces spillage. Best price-per-Ah in lead-acid segment. 2-3 years life.', details: { voltage: '12V', capacity: '100Ah', type: 'Flat Plate', cycles: '500-600', backup: '3-4 hours' } },
-      'tall-tubular-12v-150-200ah': { id: 'tall-tubular-12v-150-200ah', name: 'Tall Tubular 12V 150-200Ah', category: 'inverter', badge: 'Premium TT', brand: 'LUMINOUS • EXIDE', image: 'img/tall-tubular-12v-150-200ah.png', specs: '12V • 150-200Ah • Tubular • 1500+ Cycles', price: 'Wholesale / On Enquiry', description: 'Premium choice for extended power cuts. 6-12 hour backup. Tubular plate design = 3× longer life vs flat plate. Deep discharge recovery excellent. Fast recharge. Low water loss. Engineered for 45°C+ Indian summers. Suitable for solar. 4-5 years life.', details: { voltage: '12V', capacity: '150-200Ah', type: 'Tubular', cycles: '1500+', backup: '6-12 hours' } },
-      'lifepo4-12v-24v-lithium': { id: 'lifepo4-12v-24v-lithium', name: 'LiFePO4 12V/24V Lithium', category: 'inverter', badge: 'LFP Premium', brand: 'EXIDE LIVO • LIVGUARD', image: 'img/lifepo4-12v-24v-lithium.png', specs: '12.8V/25.6V • 100-150Ah • LFP • 3000+ Cycles', price: 'Wholesale / On Enquiry', description: 'Zero-maintenance lithium upgrade. 70% lighter (12-18 kg vs 55-65 kg). 3000+ cycles = 8-10 years. Bluetooth BMS monitors SoC, voltage, temperature from phone. Inverter compatible (Luminous, Exide, Microtek, Okaya). 3-5 hour charge time. 80% usable capacity.', details: { voltage: '12.8V/25.6V', capacity: '100-150Ah', type: 'LiFePO4', cycles: '3000+', weight: '12-18 kg' } },
-      'solar-storage-48v-lfp': { id: 'solar-storage-48v-lfp', name: 'Solar Storage 48V 100-200Ah', category: 'inverter', badge: 'Solar LFP', brand: 'OKAYA SOLAR • LIVGUARD', image: 'img/solar-storage-48v-lfp.png', specs: '48V • 100-200Ah • 4.8-9.6kWh • LFP • 3000+ Cycles', price: 'Wholesale / On Enquiry', description: 'Rooftop solar & off-grid energy storage. 4.8-9.6 kWh powers complete home overnight. 80% depth of discharge. MPPT solar controller compatible. IP54 outdoor rated. Scalable (multiple units in parallel). Smart BMS. 10+ years life. 45-88 kg.', details: { voltage: '48V', capacity: '100-200Ah', energy: '4.8-9.6kWh', chemistry: 'LiFePO4', cycles: '3000+', range: 'home overnight' } },
-      'inverter-12v-100ah-lith': { id: 'inverter-12v-100ah-lith', name: '12.8V 100Ah LiFePO4', category: 'inverter', badge: 'LFP 12V', brand: 'EXIDE LIVO', image: 'img/inverter-12v-100ah-lith.png', specs: '12.8V • 100Ah • 1280Wh • LFP • 3000+ Cycles • 12 kg', price: 'Wholesale / On Enquiry', description: 'Zero-maintenance lithium for home inverters. 3000+ cycles = 8-10 years. Inverter compatible (Luminous, Microtek, Exide, Okaya). 3-5 hour charge. 70% lighter. Bluetooth BMS. 80% usable capacity.', details: { voltage: '12.8V', capacity: '100Ah', energy: '1280Wh', chemistry: 'LiFePO4', cycles: '3000+', weight: '12 kg' } },
-      'inverter-12v-200ah-lith': { id: 'inverter-12v-200ah-lith', name: '12.8V 200Ah LiFePO4', category: 'inverter', badge: 'LFP 12V+', brand: 'LIVGUARD', image: 'img/inverter-12v-200ah-lith.png', specs: '12.8V • 200Ah • 2560Wh • LFP • 3000+ Cycles • 23 kg', price: 'Wholesale / On Enquiry', description: 'Extended backup lithium. Dual battery stackable. 8-10 year lifespan. App monitoring included. Inverter universal fit. Fast 2-3 hour charge.', details: { voltage: '12.8V', capacity: '200Ah', energy: '2560Wh', chemistry: 'LiFePO4', cycles: '3000+', weight: '23 kg' } },
-      'inverter-12v-300ah-lith': { id: 'inverter-12v-300ah-lith', name: '12.8V 300Ah LiFePO4', category: 'inverter', badge: 'LFP 12V++', brand: 'OKAYA', image: 'img/inverter-12v-300ah-lith.png', specs: '12.8V • 300Ah • 3840Wh • LFP • 3000+ Cycles • 35 kg', price: 'Wholesale / On Enquiry', description: 'Premium triple-capacity lithium. Multi-unit stacking for mega backup. 10+ year design life. Enterprise BMS. Warranty upgrade to 7 years.', details: { voltage: '12.8V', capacity: '300Ah', energy: '3840Wh', chemistry: 'LiFePO4', cycles: '3000+', weight: '35 kg' } },
-      'inverter-24v-100ah-lith': { id: 'inverter-24v-100ah-lith', name: '25.6V 100Ah LiFePO4', category: 'inverter', badge: 'LFP 24V', brand: 'TRONTEK', image: 'img/inverter-24v-100ah-lith.png', specs: '25.6V • 100Ah • 2560Wh • LFP • 3000+ Cycles • 22 kg', price: 'Wholesale / On Enquiry', description: '24V commercial UPS inverter solution. Higher voltage efficiency. Dual module stackable. Smart BMS with RS485 support. Industrial-grade reliability.', details: { voltage: '25.6V', capacity: '100Ah', energy: '2560Wh', chemistry: 'LiFePO4', cycles: '3000+', weight: '22 kg' } },
-      'inverter-24v-200ah-lith': { id: 'inverter-24v-200ah-lith', name: '25.6V 200Ah LiFePO4', category: 'inverter', badge: 'LFP 24V+', brand: 'EXIDE LIVO', image: 'img/inverter-24v-200ah-lith.png', specs: '25.6V • 200Ah • 5120Wh • LFP • 3000+ Cycles • 43 kg', price: 'Wholesale / On Enquiry', description: 'High-power 24V commercial system. Server room & telecom UPS compatible. Modular for large installations. CAN bus communication. Enterprise warranty options.', details: { voltage: '25.6V', capacity: '200Ah', energy: '5120Wh', chemistry: 'LiFePO4', cycles: '3000+', weight: '43 kg' } },
-      'inverter-48v-100ah-lith': { id: 'inverter-48v-100ah-lith', name: '51.2V 100Ah LiFePO4', category: 'inverter', badge: 'LFP 48V', brand: 'LIVGUARD', image: 'img/inverter-48v-100ah-lith.png', specs: '51.2V • 100Ah • 5120Wh • LFP • 3000+ Cycles • 42 kg', price: 'Wholesale / On Enquiry', description: '48V hybrid solar inverter compatible. Scalable system. MPPT controller friendly. 80% DoD usable. 10+ year lifespan. IP54 outdoor capable.', details: { voltage: '51.2V', capacity: '100Ah', energy: '5120Wh', chemistry: 'LiFePO4', cycles: '3000+', weight: '42 kg' } },
-      'inverter-48v-200ah-lith': { id: 'inverter-48v-200ah-lith', name: '51.2V 200Ah LiFePO4', category: 'inverter', badge: 'LFP 48V+', brand: 'OKAYA', image: 'img/inverter-48v-200ah-lith.png', specs: '51.2V • 200Ah • 10.24kWh • LFP • 3000+ Cycles • 82 kg', price: 'Wholesale / On Enquiry', description: 'Premium 48V energy storage. Large home/commercial backup. Stacking to 50kWh+. Grid-tie hybrid ready. Smart monitoring with Bluetooth. 10+ year warranty upgrade.', details: { voltage: '51.2V', capacity: '200Ah', energy: '10.24kWh', chemistry: 'LiFePO4', cycles: '3000+', weight: '82 kg' } },
-      'storage-5kwh': { id: 'storage-5kwh', name: '5kWh ESS Wall Mount', category: 'storage', badge: '5kWh', brand: 'OEM', image: 'img/storage-5kwh.png', specs: '48V • 100Ah • 5kWh • LFP • 3000+ Cycles • 42 kg', price: 'Wholesale / On Enquiry', description: 'Entry-level home energy storage. Wall-mount compact design. 4-6 hour home backup (typical load). Solar + grid hybrid. App monitoring. Plug & Play installation. 10+ year warranty.', details: { voltage: '48V', capacity: '100Ah', energy: '5kWh', chemistry: 'LiFePO4', cycles: '3000+', backup: '4-6 hours' } },
-      'storage-10kwh': { id: 'storage-10kwh', name: '10kWh ESS (Dual Stack)', category: 'storage', badge: '10kWh', brand: 'LIVGUARD', image: 'img/storage-10kwh.png', specs: '2× 5kWh • 48V • LFP • 3000+ Cycles • 84 kg total', price: 'Wholesale / On Enquiry', description: 'Mid-range Powerwall solution. 8-12 hour family home backup. Stackable modular design. Solar + battery + grid integration. Smart load management app. Scalable to 50kWh+. 10+ year lifespan.', details: { voltage: '48V', capacity: '100Ah', energy: '10kWh', chemistry: 'LiFePO4', cycles: '3000+', backup: '8-12 hours' } },
-      'storage-15kwh': { id: 'storage-15kwh', name: '15kWh ESS (Triple Stack)', category: 'storage', badge: '15kWh', brand: 'OKAYA', image: 'img/storage-15kwh.png', specs: '3× 5kWh • 48V • LFP • 3000+ Cycles • 126 kg total', price: 'Wholesale / On Enquiry', description: 'Premium large-home/small-commercial backup. 24-36 hour family load support. Triple modular stacking. Advanced load balancing. Remote monitoring with AI forecasting. 10+ year warranty standard.', details: { voltage: '48V', capacity: '100Ah', energy: '15kWh', chemistry: 'LiFePO4', cycles: '3000+', backup: '24-36 hours' } },
-      'solar-3kw': { id: 'solar-3kw', name: '3kW Hybrid Solar Inverter', category: 'solar', badge: '3kW', brand: 'OEM', image: 'img/solar-3kw.png', specs: '3000W • 48V • MPPT • Grid-Tie & Off-Grid • WiFi Monitor', price: 'Wholesale / On Enquiry', description: 'Single-phase hybrid solar inverter. MPPT solar charge controller built-in. Compatible with 48V LiFePO4 batteries. Grid-tie + battery backup mode. WiFi monitoring app included. Ideal for 3-5 kW rooftop solar systems. 10-year warranty.', details: { power: '3000W', voltage: '48V', type: 'MPPT', phases: 'Single', monitoring: 'WiFi', warranty: '10 years' } },
-      'solar-5kw': { id: 'solar-5kw', name: '5kW Hybrid Solar Inverter', category: 'solar', badge: '5kW', brand: 'OEM', image: 'img/solar-5kw.png', specs: '5000W • 48V • MPPT • Grid-Tie & Off-Grid • CAN Bus', price: 'Wholesale / On Enquiry', description: 'Single/3-phase hybrid solar inverter option. Advanced MPPT dual-tracker. Seamless battery charge/discharge. Grid export capability. CAN bus communication for large systems. WiFi + Bluetooth monitoring. Ideal for 5-10 kW solar systems. 10-year warranty.', details: { power: '5000W', voltage: '48V', type: 'MPPT', phases: 'Single/3-phase', monitoring: 'WiFi/Bluetooth', warranty: '10 years' } },
-      'vrla-agm-12v-100-150ah': { id: 'vrla-agm-12v-100-150ah', name: 'VRLA AGM 12V 100-150Ah', category: 'industrial', badge: 'VRLA AGM', brand: 'EXIDE • AMARON', image: 'img/vrla-agm-12v-100-150ah.png', specs: '12V • 100-150Ah • VRLA • 10 Year Life • <3% self-discharge', price: 'Wholesale / On Enquiry', description: 'Telecom towers, server rooms, hospitals, ATMs, institutional UPS. Valve-regulated sealed construction. Zero maintenance. Any mounting orientation. 10-year design life (float service). 300-400 cycles. -15°C to +50°C operation. Industry standard for critical infrastructure.', details: { voltage: '12V', capacity: '100-150Ah', type: 'VRLA AGM', lifespan: '10 years', cycles: '300-400' } },
-      'gel-industrial-12v-100-200ah': { id: 'gel-industrial-12v-100-200ah', name: 'Gel Industrial 12V 100-200Ah', category: 'industrial', badge: 'Gel Outdoor', brand: 'BASE • SF SONIC', image: 'img/gel-industrial-12v-100-200ah.png', specs: '12V • 100-200Ah • GEL • 12 Year Life • -20°C to +55°C', price: 'Wholesale / On Enquiry', description: 'Solar outdoor installations, telecom outdoor cabinets, marine, remote off-grid sites. Silicon dioxide-gelled electrolyte prevents stratification. Operates in extreme temps (Rajasthan heat to Himalayan cold). 12-year design life. 500-600 cycles. <2% monthly self-discharge. IP65 cabinet compatible.', details: { voltage: '12V', capacity: '100-200Ah', type: 'GEL', lifespan: '12 years', temp: '-20°C to +55°C' } },
-      'dg-set-generator-12v-150-200ah': { id: 'dg-set-generator-12v-150-200ah', name: 'DG Set Generator 12V/24V 150-200Ah', category: 'industrial', badge: 'DG Starter', brand: 'EXIDE • AMARON • SF SONIC', image: 'img/dg-set-generator-12v-150-200ah.png', specs: '12V/24V • 150-200Ah • SMF • 800-1200A CCA • 400+ Cycles', price: 'Wholesale / On Enquiry', description: 'Diesel generator starting (Kirloskar, Cummins, Mahindra, Greaves, CAT). 1200A CCA = maximum cold-start force. Heavy-duty plates withstand repeated cranking. 180-220 min reserve capacity. Vibration resistant. -10°C to +50°C operation. 4-5 years life.', details: { voltage: '12V/24V', capacity: '150-200Ah', cca: '800-1200A', type: 'SMF', lifespan: '4-5 years' } },
-      'lithium-ups-rack-48v-100-200ah': { id: 'lithium-ups-rack-48v-100-200ah', name: 'Industrial Lithium UPS 48V Rack', category: 'industrial', badge: 'Enterprise', brand: 'WATTLABS OEM', image: 'img/lithium-ups-rack-48v-100-200ah.png', specs: '48V • 100-200Ah • LFP • 5-10.24kWh • 3500+ Cycles', price: 'Wholesale / On Enquiry', description: 'Data centres, hospitals, banks, telecom exchanges. 19-inch 2U/4U rack mount. RS485/CAN/Modbus SCADA integration. 2C fast charge (30 min for 100Ah). Remote monitoring. Scalable 5-100kWh+. Zero maintenance. 10+ years operational life. -0°C to +45°C indoor operation.', details: { voltage: '48V', capacity: '100-200Ah', energy: '5-10.24kWh', chemistry: 'LiFePO4', cycles: '3500+', form: 'Rack Mount' } },
-      'ecycle-24v-10ah-lith': { id: 'ecycle-24v-10ah-lith', name: 'E-Cycle Battery 24V 10Ah', category: 'ecycle', badge: 'LiFePO4', brand: 'OEM Certified', image: 'img/ecycle-24v-10ah-lith.png', specs: '24V · 10Ah · 240Wh · ~40km · 1500+ Cycles · 2yr Warranty', price: 'Wholesale Pricing', description: 'Lightweight LiFePO4 rear-rack battery for entry-level electric bicycles. Smart BMS with 5-layer protection. IP65 rated. 1500+ cycle life. Zero maintenance. 4–6 hour fast charge.', details: { voltage: '24V', capacity: '10Ah', energy: '240Wh', chemistry: 'LiFePO4', cycles: '1500+', range: '~40km' } },
-      'ecycle-36v-10ah-lith': { id: 'ecycle-36v-10ah-lith', name: 'E-Cycle Battery 36V 10Ah', category: 'ecycle', badge: 'LiFePO4', brand: 'OEM Certified', image: 'img/ecycle-36v-10ah-lith.png', specs: '36V · 10Ah · 360Wh · ~50km · 1500+ Cycles · 2yr Warranty', price: 'Wholesale Pricing', description: '36V lithium pack for mid-range e-cycles. Rear rack mount design. Smart BMS. IP65. Fast charge in 4–6 hours. 1500+ cycles. 60% lighter than lead-acid.', details: { voltage: '36V', capacity: '10Ah', energy: '360Wh', chemistry: 'LiFePO4', cycles: '1500+', range: '~50km' } },
-      'ecycle-36v-15ah-lith': { id: 'ecycle-36v-15ah-lith', name: 'E-Cycle Battery 36V 15Ah', category: 'ecycle', badge: 'LiFePO4', brand: 'OEM Certified', image: 'img/ecycle-36v-15ah-lith.png', specs: '36V · 15Ah · 540Wh · ~70km · 1500+ Cycles · 3yr Warranty', price: 'Wholesale Pricing', description: 'High-capacity 36V pack for commuter and delivery e-cycles. Rack mount. Smart BMS. IP65. 1500+ cycles. Ideal for 60–70 km daily routes. 3+ year lifespan.', details: { voltage: '36V', capacity: '15Ah', energy: '540Wh', chemistry: 'LiFePO4', cycles: '1500+', range: '~70km' } },
-      'ecycle-48v-15ah-lith': { id: 'ecycle-48v-15ah-lith', name: 'E-Cycle Battery 48V 15Ah', category: 'ecycle', badge: 'LiFePO4', brand: 'OEM Certified', image: 'img/ecycle-48v-15ah-lith.png', specs: '48V · 15Ah · 720Wh · ~80km · 1500+ Cycles · 3yr Warranty', price: 'Wholesale Pricing', description: '48V LiFePO4 for performance e-cycles. Frame or rack mount. Smart BMS. IP65. Fast charge. 1500+ cycles. Suits high-torque motor kits. 3+ year lifespan.', details: { voltage: '48V', capacity: '15Ah', energy: '720Wh', chemistry: 'LiFePO4', cycles: '1500+', range: '~80km' } },
-      'ecycle-48v-20ah-lith': { id: 'ecycle-48v-20ah-lith', name: 'E-Cycle Battery 48V 20Ah', category: 'ecycle', badge: 'Premium', brand: 'OEM Certified', image: 'img/ecycle-48v-20ah-lith.png', specs: '48V · 20Ah · 960Wh · ~100km · 1500+ Cycles · 4yr Warranty', price: 'Wholesale Pricing', description: 'Maximum-range 48V LiFePO4 for performance e-bikes. Dual battery stackable. Smart BMS. IP65. 4+ hour charge. 1500+ cycles. 100+ km per charge. 4+ year lifespan.', details: { voltage: '48V', capacity: '20Ah', energy: '960Wh', chemistry: 'LiFePO4', cycles: '1500+', range: '~100km' } },
-      'ess-48v-5kwh-wall': { id: 'ess-48v-5kwh-wall', name: 'Powerwall 48V 5.12kWh', category: 'ess', badge: 'Wall Mount', brand: 'LiFePO4', image: 'img/ess-48v-5kwh-wall.png', specs: '48V · 100Ah · 5120Wh · Wall Mount · 3000+ Cycles · IP65', price: 'Wholesale / On Enquiry', description: 'Compact 5kWh wall-mount LiFePO4 system for home solar backup. Smart BMS with app monitoring. IP65 outdoor rated. Scalable up to 50kWh+. 8–10 hour home backup. 10+ year design life.', details: { voltage: '48V', capacity: '100Ah', energy: '5.12kWh', chemistry: 'LiFePO4', cycles: '3000+', form: 'Wall Mount' } },
-      'ess-48v-10kwh-wall': { id: 'ess-48v-10kwh-wall', name: 'Powerwall 48V 10.24kWh', category: 'ess', badge: 'Wall Mount', brand: 'LiFePO4', image: 'img/ess-48v-10kwh-wall.png', specs: '48V · 200Ah · 10.24kWh · Wall Mount · 3000+ Cycles · IP65', price: 'Wholesale / On Enquiry', description: 'Extended-capacity 10kWh wall-mount LiFePO4 for large home solar systems. Smart BMS + Bluetooth app. IP65 outdoor rated. Parallel scalable. 15–20 hour backup. 10+ year warranty.', details: { voltage: '48V', capacity: '200Ah', energy: '10.24kWh', chemistry: 'LiFePO4', cycles: '3000+', form: 'Wall Mount' } },
-      'ess-51v-5kwh-wall': { id: 'ess-51v-5kwh-wall', name: 'Powerwall 51.2V 5.12kWh', category: 'ess', badge: 'Wall Mount', brand: 'LiFePO4', image: 'img/ess-51v-5kwh-wall.png', specs: '51.2V · 100Ah · 5120Wh · Wall Mount · 3000+ Cycles · IP65', price: 'Wholesale / On Enquiry', description: '51.2V wall-mount LiFePO4 for solar inverter systems. MPPT compatible. Smart BMS. IP65. Scalable modular. 8–10 hour home backup. Zero maintenance. 10+ year lifespan.', details: { voltage: '51.2V', capacity: '100Ah', energy: '5.12kWh', chemistry: 'LiFePO4', cycles: '3000+', form: 'Wall Mount' } },
-      'ess-51v-10kwh-wall': { id: 'ess-51v-10kwh-wall', name: 'Powerwall 51.2V 10.24kWh', category: 'ess', badge: 'Wall Mount', brand: 'LiFePO4', image: 'img/ess-51v-10kwh-wall.png', specs: '51.2V · 200Ah · 10.24kWh · Wall Mount · 3000+ Cycles · IP65', price: 'Wholesale / On Enquiry', description: 'High-capacity 51.2V wall ESS for large solar homes & commercial offices. MPPT compatible. App monitoring. IP65. Parallel expandable to 100kWh+. 15–20 hour backup.', details: { voltage: '51.2V', capacity: '200Ah', energy: '10.24kWh', chemistry: 'LiFePO4', cycles: '3000+', form: 'Wall Mount' } },
-      'ess-hv-100v-10kwh': { id: 'ess-hv-100v-10kwh', name: 'HV ESS 100V 10kWh Stacked', category: 'ess', badge: 'High Voltage', brand: 'LiFePO4', image: 'img/ess-hv-100v-10kwh.png', specs: '100V · 100Ah · 10kWh · Stacked · 3500+ Cycles · RS485', price: 'Wholesale / On Enquiry', description: 'High-voltage commercial ESS for large solar farms and industrial backup. Stackable 100V modules. RS485/CAN SCADA integration. Outdoor IP65 rated. 3500+ cycles. 10+ year life.', details: { voltage: '100V', capacity: '100Ah', energy: '10kWh', chemistry: 'LiFePO4', cycles: '3500+', form: 'Stacked' } },
-      'ess-hv-200v-20kwh': { id: 'ess-hv-200v-20kwh', name: 'HV ESS 200V 20kWh', category: 'ess', badge: 'Enterprise', brand: 'LiFePO4', image: 'img/ess-hv-200v-20kwh.png', specs: '200V · 100Ah · 20kWh · Stacked · 3500+ Cycles · RS485', price: 'Wholesale / On Enquiry', description: 'Ultra-high-voltage commercial ESS for large industrial installations. 200V stacked modules. RS485/CAN/Modbus SCADA. 10+ hour enterprise backup. 3500+ cycles. 10+ year warranty.', details: { voltage: '200V', capacity: '100Ah', energy: '20kWh', chemistry: 'LiFePO4', cycles: '3500+', form: 'Stacked' } },
-      'ess-rack-48v-10kwh': { id: 'ess-rack-48v-10kwh', name: 'Rack ESS 48V 10.24kWh', category: 'ess', badge: 'Rack Mount', brand: 'LiFePO4', image: 'img/ess-rack-48v-10kwh.png', specs: '48V · 200Ah · 10.24kWh · 19-inch 4U · 3500+ Cycles · RS485', price: 'Wholesale / On Enquiry', description: '19-inch rack 48V LiFePO4 for data centres and server rooms. 2C fast charge. RS485/CAN/Modbus SCADA. 10+ hour backup. Parallel expandable. 3500+ cycles.', details: { voltage: '48V', capacity: '200Ah', energy: '10.24kWh', chemistry: 'LiFePO4', cycles: '3500+', form: 'Rack Mount' } },
-      'ess-rack-48v-20kwh': { id: 'ess-rack-48v-20kwh', name: 'Rack ESS 48V 20.48kWh', category: 'ess', badge: 'Mission Critical', brand: 'LiFePO4', image: 'img/ess-rack-48v-20kwh.png', specs: '48V · 400Ah · 20.48kWh · 19-inch 4U · 3500+ Cycles · RS485', price: 'Wholesale / On Enquiry', description: 'High-capacity 19-inch rack ESS for mission-critical infrastructure. Hospitals, banks, telecom. 2C fast charge. SCADA integration. 15+ hour backup. 3500+ cycles. 10+ year life.', details: { voltage: '48V', capacity: '400Ah', energy: '20.48kWh', chemistry: 'LiFePO4', cycles: '3500+', form: 'Rack Mount' } },
-      'solar-inverter-3kw': { id: 'solar-inverter-3kw', name: 'Hybrid Solar Inverter 3kW', category: 'solar-inverter', badge: '3kW', brand: 'Solar Ready', image: 'img/solar-inverter-3kw.png', specs: '3000W • 48V • MPPT • Single Phase • WiFi Monitoring • IP65', price: 'Wholesale / On Enquiry', description: 'Pure sine wave hybrid solar inverter. Single-phase MPPT charger. Solar + grid + battery charge modes. WiFi/Bluetooth monitoring. LiFePO4 compatible. Suitable for 2-3 kW solar systems. 10-year warranty.', details: { power: '3000W', voltage: '48V', type: 'MPPT', phases: 'Single', monitoring: 'WiFi/Bluetooth', warranty: '10 years' } },
-      'solar-inverter-5kw': { id: 'solar-inverter-5kw', name: 'Hybrid Solar Inverter 5kW', category: 'solar-inverter', badge: '5kW', brand: 'Solar Ready', image: 'img/solar-inverter-5kw.png', specs: '5000W • 48V • Dual MPPT • Grid-Tie & Off-Grid • CAN Bus • IP65', price: 'Wholesale / On Enquiry', description: 'Advanced dual-MPPT hybrid solar inverter. Seamless battery charge/discharge. Grid export capable. CAN bus SCADA integration. WiFi/Bluetooth app monitoring. LiFePO4 ready. Ideal for 5-10 kW solar systems. 10-year warranty.', details: { power: '5000W', voltage: '48V', type: 'Dual MPPT', phases: 'Single/3-phase', monitoring: 'WiFi/Bluetooth', warranty: '10 years' } }
-    };
+  const chipsHtml = [];
+  if (p.details?.warranty) chipsHtml.push(`<div class="chip">${p.details.warranty} Warranty</div>`);
+  if (p.details?.cycles) chipsHtml.push(`<div class="chip">${p.details.cycles} Cycles</div>`);
+  if (p.details?.range) chipsHtml.push(`<div class="chip">Range: ${p.details.range}</div>`);
+  document.getElementById('chips').innerHTML = chipsHtml.join('');
 
-    // Fetch products from JSON
-    fetch('data/products-comprehensive.json')
-      .then(response => response.json())
-      .then(data => {
-        const productsDatabase = {};
-        data.products.forEach(p => {
-          productsDatabase[p.id] = p;
-        });
+  const specsData = [
+    ['Voltage', p.details?.voltage || '—'],
+    ['Capacity', p.details?.capacity || '—'],
+    ['Chemistry', p.details?.chemistry || '—'],
+    ['Cycles', p.details?.cycles || '—'],
+    ['Warranty', p.details?.warranty || '—'],
+    ['Weight', p.details?.weight || '—'],
+  ];
+  
+  const tableHtml = specsData.map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('');
+  document.getElementById('specsTable').innerHTML = tableHtml;
 
-        // Merge with fallback products
-        const allProducts = { ...fallbackProducts, ...productsDatabase };
+  const featuresData = [
+    { icon: '⚡', title: 'High Performance', desc: 'Optimized for maximum efficiency' },
+    { icon: '🛡️', title: 'Advanced Safety', desc: 'Built-in protection systems' },
+    { icon: '♻️', title: 'Eco-Friendly', desc: 'Sustainable lithium technology' },
+    { icon: '🔧', title: 'Easy Installation', desc: 'Simple mounting and setup' },
+    { icon: '📊', title: 'Smart Monitoring', desc: 'Real-time performance tracking' },
+    { icon: '🌍', title: 'Wide Compatibility', desc: 'Works with various systems' },
+  ];
 
-        if (!productId || !allProducts[productId]) {
-          productContent.innerHTML = `
-            <div class="product-not-found">
-              <h2>Product Not Found</h2>
-              <p>Sorry, we couldn't find the product you're looking for.</p>
-              <a href="products.html" style="color: var(--blue); text-decoration: none; font-weight: 600;">← Return to Catalogue</a>
-            </div>
-          `;
-          return;
-        }
+  const featHtml = featuresData.map(f => `
+    <div class="fc">
+      <div class="fi">${f.icon}</div>
+      <div>
+        <div class="ft">${f.title}</div>
+        <div class="fd">${f.desc}</div>
+      </div>
+    </div>
+  `).join('');
+  document.getElementById('featuresGrid').innerHTML = featHtml;
+  
+  // Update JSON-LD Schema
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": p.name,
+    "description": p.description,
+    "image": p.image,
+    "brand": {
+      "@type": "Brand",
+      "name": p.brand || "Arkaworld™"
+    },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Arkaworld™"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": `https://arkaworld26.com/product-detail.html?product=${p.id}`,
+      "priceCurrency": "INR",
+      "price": p.price?.replace(/[^\d]/g, '') || "0",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "250"
+    }
+  };
+  document.getElementById('productSchema').textContent = JSON.stringify(schema, null, 2);
+}
 
-        const product = allProducts[productId];
-      
-      // Build specs grid
-      const specsHtml = Object.entries(product.details).map(([key, value]) => `
-        <div class="spec-item">
-          <div class="spec-label">${key.replace(/([A-Z])/g, ' $1').toLowerCase()}</div>
-          <div class="spec-value">${value}</div>
-        </div>
-      `).join('');
+function renderRelated() {
+  const cat = currentProduct.category;
+  relatedProducts = products.filter(p => p.category === cat && p.id !== currentProduct.id).slice(0, 4);
+  
+  if (relatedProducts.length === 0) {
+    document.getElementById('relProdSection').style.display = 'none';
+    return;
+  }
+  
+  document.getElementById('relProdSection').style.display = 'block';
+  
+  const relHtml = relatedProducts.map(p => `
+    <div class="rc" onclick="location.href='product-detail.html?product=${p.id}'">
+      <div class="rc-img">
+        <img src="${p.image}" alt="${p.name}" onerror="this.style.display='none'">
+      </div>
+      <div class="rc-body">
+        <div class="rc-badge">${p.badge || 'PRODUCT'}</div>
+        <div class="rc-name">${p.name}</div>
+        <div class="rc-spec">${p.details?.voltage || '—'} | ${p.details?.capacity || '—'}</div>
+        <button class="rc-btn" onclick="event.stopPropagation(); location.href='product-detail.html?product=${p.id}'">View</button>
+      </div>
+    </div>
+  `).join('');
+  
+  document.getElementById('relProd').innerHTML = relHtml;
+}
 
-      // Get related products
-      const relatedProducts = Object.entries(allProducts)
-        .filter(([id, p]) => p.category === product.category && id !== productId)
-        .slice(0, 4);
+function tabClick(n) {
+  document.querySelectorAll('.tb').forEach(b => b.classList.remove('on'));
+  document.querySelectorAll('.tp').forEach(t => t.classList.remove('on'));
+  document.querySelectorAll('.tb')[n].classList.add('on');
+  document.getElementById('tab' + n).classList.add('on');
+}
 
-      const relatedHtml = relatedProducts.map(([id, p]) => `
-        <div class="product-card-mini" onclick="window.location.href='product-detail.html?product=${id}'">
-          <div class="product-card-mini-name">${p.name}</div>
-          <div class="product-card-mini-spec">${p.specs}</div>
-          <a href="contact.html" class="product-card-mini-btn" onclick="event.stopPropagation()">Get Quote</a>
-        </div>
-      `).join('');
-
-      // Update page title
-      document.title = `${product.name} | Arkaworld™`;
-      document.getElementById('pageTitle').textContent = `${product.name} | Arkaworld™`;
-
-      productContent.innerHTML = `
-        <div class="product-detail-grid">
-          <div class="product-detail-image">
-            <img src="${product.image}" alt="${product.name}">
-          </div>
-
-          <div class="product-detail-content">
-            <span class="product-detail-badge">${product.badge}</span>
-            <h1>${product.name}</h1>
-            <div class="product-detail-brand">Brand: ${product.brand}</div>
-            <div class="product-detail-price">${product.price}</div>
-            <div class="product-detail-description">${product.description}</div>
-            
-            <div class="cta-section">
-              <a href="contact.html" class="cta-button cta-primary">Get Quote Now</a>
-              <a href="products.html" class="cta-button cta-secondary">Browse More</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-specs-section">
-          <h3>Technical Specifications</h3>
-          <div class="specs-grid">
-            ${specsHtml}
-          </div>
-        </div>
-
-        ${relatedProducts.length > 0 ? `
-        <div class="related-products-section">
-          <h2>Related Products in ${product.category}</h2>
-          <div class="related-products-grid">
-            ${relatedHtml}
-          </div>
-        </div>
-        ` : ''}
-      `;
-      })
-      .catch(error => {
-        console.error('Error loading products:', error);
-        productContent.innerHTML = `
-          <div class="product-not-found">
-            <h2>Error Loading Product</h2>
-            <p>There was an error loading the product database.</p>
-            <a href="products.html" style="color: var(--blue); text-decoration: none; font-weight: 600;">← Return to Catalogue</a>
-          </div>
-        `;
-      });
+init();
   </script>
 </body>
 </html>
