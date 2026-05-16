@@ -509,12 +509,29 @@
   if (searchInput) searchInput.addEventListener('input', filterProducts);
   if (categoryDropdown) categoryDropdown.addEventListener('change', filterProducts);
 
-  // Load products from JSON
-  fetch('data/products.json')
+  // Load products from JSON, then apply ?filter= param from URL
+  fetch('data/products.json?v=' + Date.now())
     .then(res => res.json())
     .then(data => {
       allProducts = data.products;
       renderProducts();
+
+      // Auto-apply filter from URL query param (e.g. ?filter=bike)
+      const urlParams = new URLSearchParams(window.location.search);
+      const filterParam = urlParams.get('filter');
+      if (filterParam && categoryDropdown) {
+        // Set the dropdown value if a matching option exists
+        const option = [...categoryDropdown.options].find(o => o.value === filterParam);
+        if (option) {
+          categoryDropdown.value = filterParam;
+          filterProducts();
+          // Scroll to the matching category section
+          const section = document.querySelector(`.category-section[data-category="${filterParam}"]`);
+          if (section) {
+            setTimeout(() => section.scrollIntoView({ behavior: 'smooth', block: 'start' }), 300);
+          }
+        }
+      }
     })
     .catch(err => console.error('Error loading products:', err));
 </script>

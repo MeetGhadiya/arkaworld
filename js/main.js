@@ -403,30 +403,43 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 2500);
   })();
 
-  /* 16. PRODUCT CARD CLICK — Navigate to detail page */
-  function setupProductClickHandlers() {
+  /* 16. PRODUCT CARD CLICK — Navigate to detail/filter page */
+
+  // Home page category cards → products.html?filter=<category>
+  document.querySelectorAll('.product-card[data-id]').forEach(card => {
+    const categoryId = card.getAttribute('data-id');
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', function (e) {
+      // Don't navigate if clicking the Get Quote link
+      if (e.target.closest('.link-arrow') || e.target.closest('.cta-link')) {
+        return;
+      }
+      window.location.href = `products.html?filter=${categoryId}`;
+    });
+  });
+
+  // Products page individual product cards → product-detail.html?product=<id>
+  function setupProductItemHandlers() {
     document.querySelectorAll('.product-item[data-name]').forEach(card => {
+      if (card.dataset.clickBound) return; // avoid duplicate listeners
+      card.dataset.clickBound = '1';
       const productId = card.getAttribute('data-name');
       card.style.cursor = 'pointer';
       card.addEventListener('click', function (e) {
-        // Don't navigate if clicking the Get Quote button
         if (e.target.closest('.product-btn') || e.target.closest('.cta-button')) {
           return;
         }
-        console.log('Navigating to product:', productId);
         window.location.href = `product-detail.html?product=${productId}`;
       });
     });
   }
-  
-  // Setup on initial load
-  setupProductClickHandlers();
-  
-  // Also setup on any dynamic content changes
+
+  setupProductItemHandlers();
+
+  // Re-run for dynamically loaded cards
   const observer = new MutationObserver(() => {
-    setupProductClickHandlers();
+    setupProductItemHandlers();
   });
-  
   observer.observe(document.body, { childList: true, subtree: true });
 
 });

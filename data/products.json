@@ -599,6 +599,206 @@
         "maintenance": "Minimal (inverter maintenance)",
         "ipRating": "IP65"
       }
+    },
+    {
+      "id": "bike-12v-2-5ah-mf",
+      "name": "Bike Battery 12V 2.5Ah MF",
+      "category": "bike",
+      "badge": "MF Sealed",
+      "brand": "EXIDE",
+      "image": "img/exide-amaron-standard-mf-12v-2.5ah.png",
+      "specs": "12V • 2.5Ah • MF Sealed • Maintenance Free • 100cc–150cc",
+      "price": "Wholesale / On Enquiry",
+      "description": "Sealed maintenance-free battery for 100cc–150cc motorcycles. Compatible with Hero Splendor, Honda Shine, Bajaj CT100. No water top-up required. Long shelf life.",
+      "details": {
+        "voltage": "12V",
+        "capacity": "2.5Ah",
+        "chemistry": "MF (AGM)",
+        "cycles": "300+",
+        "weight": "0.9 kg",
+        "warranty": "18 months",
+        "maintenance": "Zero maintenance"
+      }
+    },
+    {
+      "id": "bike-12v-5ah-mf",
+      "name": "Bike Battery 12V 5Ah MF",
+      "category": "bike",
+      "badge": "MF Sealed",
+      "brand": "AMARON",
+      "image": "img/amaron-pro-bike-high-cca-12v-5ah.png",
+      "specs": "12V • 5Ah • MF Sealed • High CCA • 150cc–250cc",
+      "price": "Wholesale / On Enquiry",
+      "description": "High CCA sealed MF battery for 150cc–250cc motorcycles and scooters. Fits Honda Activa, TVS Apache, Bajaj Pulsar, Hero Glamour. Superior cold cranking amp performance.",
+      "details": {
+        "voltage": "12V",
+        "capacity": "5Ah",
+        "chemistry": "MF (AGM)",
+        "cycles": "300+",
+        "weight": "1.5 kg",
+        "warranty": "18 months",
+        "maintenance": "Zero maintenance"
+      }
+    },
+    {
+      "id": "bike-12v-9ah-agm",
+      "name": "Bike Battery 12V 9Ah AGM",
+      "category": "bike",
+      "badge": "AGM",
+      "brand": "SF SONIC",
+      "image": "img/sf-sonic-heavy-duty-flash-12v-9ah.png",
+      "specs": "12V • 9Ah • AGM • Heavy Duty • 200cc–250cc",
+      "price": "Wholesale / On Enquiry",
+      "description": "Heavy-duty AGM battery for 200cc–250cc bikes. SF Sonic Flash series. High vibration resistance. Fast recharge. Fits TVS Apache RTR, Bajaj Avenger, Royal Enfield 350.",
+      "details": {
+        "voltage": "12V",
+        "capacity": "9Ah",
+        "chemistry": "AGM",
+        "cycles": "350+",
+        "weight": "2.8 kg",
+        "warranty": "24 months",
+        "maintenance": "Zero maintenance"
+      }
+    },
+    {
+      "id": "bike-12v-2-5ah-xplore",
+      "name": "Bike Battery 12V 2.5Ah Xplore",
+      "category": "bike",
+      "badge": "Wet Cell",
+      "brand": "EXIDE",
+      "image": "img/exide-xplore-mf-sealed-12v-2.5ah.png",
+      "specs": "12V • 2.5Ah • Wet Cell • Entry Level • 100cc",
+      "price": "Wholesale / On Enquiry",
+      "description": "Entry-level Exide Xplore battery for 100cc commuter motorcycles. Suitable for Hero HF Deluxe, Bajaj CT100. Excellent value for budget segment bikes.",
+      "details": {
+        "voltage": "12V",
+        "capacity": "2.5Ah",
+        "chemistry": "Wet Cell",
+        "cycles": "250+",
+        "weight": "0.85 kg",
+        "warranty": "12 months",
+        "maintenance": "Minimal"
+      }
+    },
+    {
+      "id": "car-12v-35ah-smf",
+      "name": "Car Battery 12V 35Ah SMF",
+      "category": "car",
+      "badge": "SMF",
+      "brand": "EXIDE",
+      "image": "img/exide-amaron-hatchback-smf-12v-35ah.png",
+      "specs": "12V • 35Ah • SMF • Hatchback • Maruti / Hyundai / Tata",
+      "price": "Wholesale / On Enquiry",
+      "description": "Sealed maintenance-free battery for small hatchbacks. Fits Maruti Alto, Hyundai Santro, Tata Nano. High cranking power, spill-proof design.",
+      "details": {
+        "voltage": "12V",
+        "capacity": "35Ah",
+        "chemistry": "SMF (AGM)",
+        "cycles": "400+",
+        "weight": "8.5 kg",
+        "warranty": "24 months",
+        "maintenance": "Zero maintenance"
+      }
+    },
+    {
+      "id": "car-12v-55ah-agm",
+      "name": "Car Battery 12V 55Ah AGM",
+      "category": "car",
+      "badge": "AGM",
+      "brand": "AMARON",
+      "image": "img/amaron-livguard-sedan-smf-12v-55ah.png",
+      "specs": "12V • 55Ah • AGM • Sedan / SUV • Stop-Start Ready",
+      "price": "Wholesale / On Enquiry",
+      "description": "Premium AGM battery for mid-size sedans and SUVs with Stop-Start systems. Fits Maruti Swift, Hyundai i20, Tata Nexon, Honda City. Superior deep discharge recovery.",
+      "details": {
+        "voltage": "12V",
+        "capacity": "55Ah",
+        "chemistry": "AGM",
+        "cycles": "500+",
+        "weight": "13.5 kg",
+        "warranty": "36 months",
+        "maintenance": "Zero maintenance"
+      }
+    },
+    {
+      "id": "car-12v-75ah-agm-suv",
+      "name": "Car Battery 12V 75Ah AGM SUV",
+      "category": "car",
+      "badge": "SUV Grade",
+      "brand": "EXIDE",
+      "image": "img/exide-base-suv-agm-12v-75-100ah.png",
+      "specs": "12V • 75Ah–100Ah • AGM • SUV / MUV • OEM Spec",
+      "price": "Wholesale / On Enquiry",
+      "description": "High-capacity AGM battery for large SUVs and MUVs. Fits Mahindra Scorpio, Toyota Innova, Ford Endeavour, Tata Safari. OEM-specification fitment with high CCA for diesel engines.",
+      "details": {
+        "voltage": "12V",
+        "capacity": "75Ah–100Ah",
+        "chemistry": "AGM",
+        "cycles": "500+",
+        "weight": "19 kg",
+        "warranty": "36 months",
+        "maintenance": "Zero maintenance"
+      }
+    },
+    {
+      "id": "industrial-12v-100ah-vrla",
+      "name": "Industrial VRLA Battery 12V 100Ah",
+      "category": "industrial",
+      "badge": "VRLA",
+      "brand": "EXIDE",
+      "image": "img/exide-amaron-vrla-agm-12v-100-150ah.png",
+      "specs": "12V • 100Ah–150Ah • VRLA AGM • Telecom / UPS / DG",
+      "price": "Wholesale / On Enquiry",
+      "description": "Industrial VRLA AGM battery for telecom towers, UPS systems, and DG sets. High cycle life, low self-discharge, recombination technology. Float and cyclic applications.",
+      "details": {
+        "voltage": "12V",
+        "capacity": "100Ah–150Ah",
+        "chemistry": "VRLA AGM",
+        "cycles": "500+",
+        "weight": "28 kg",
+        "warranty": "24 months",
+        "maintenance": "Zero maintenance"
+      }
+    },
+    {
+      "id": "industrial-12v-100ah-gel",
+      "name": "Gel Battery 12V 100Ah–200Ah",
+      "category": "industrial",
+      "badge": "GEL",
+      "brand": "BASE / SF SONIC",
+      "image": "img/base-sf-sonic-gel-outdoor-12v-100-200ah.png",
+      "specs": "12V • 100Ah–200Ah • Gel • Outdoor / Solar / Telecom",
+      "price": "Wholesale / On Enquiry",
+      "description": "Sealed gel battery for outdoor solar installations, telecom sites, and remote UPS systems. Excellent in high-temperature environments. No acid spillage. 10+ year design life.",
+      "details": {
+        "voltage": "12V",
+        "capacity": "100Ah–200Ah",
+        "chemistry": "Gel (VRLA)",
+        "cycles": "600+",
+        "weight": "30 kg",
+        "warranty": "36 months",
+        "maintenance": "Zero maintenance"
+      }
+    },
+    {
+      "id": "industrial-24v-dg-starter",
+      "name": "DG Starter Battery 12V / 24V",
+      "category": "industrial",
+      "badge": "DG Sets",
+      "brand": "EXIDE / AMARON",
+      "image": "img/exide-amaron-sfsonic-dg-starter-12v-24v.png",
+      "specs": "12V / 24V • High CCA • DG Starter • Generator Sets",
+      "price": "Wholesale / On Enquiry",
+      "description": "Heavy-duty starter battery for diesel generator sets and commercial DG applications. High CCA for reliable cold starts. Compatible with Kirloskar, Cummins, Ashok Leyland generators.",
+      "details": {
+        "voltage": "12V / 24V",
+        "capacity": "100Ah–200Ah",
+        "chemistry": "Flooded / SMF",
+        "cycles": "400+",
+        "weight": "35 kg",
+        "warranty": "24 months",
+        "maintenance": "Minimal"
+      }
     }
   ]
-}
+}
