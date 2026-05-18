@@ -2,12 +2,22 @@ const CACHE = 'arkaworld-v5';
 const ASSETS = [
   '/', '/index.html', '/products.html', '/about.html', '/contact.html',
   '/faq.html', '/product-detail.html',
-  '/css/style.css', '/js/main.js', '/manifest.json',
-  '/js/products-data.js'
+  '/css/style.css', '/js/main.js', '/manifest.json'
 ];
 
 self.addEventListener('install', e => {
-  e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));
+  e.waitUntil(
+    caches.open(CACHE)
+      .then(cache => Promise.all(
+        ASSETS.map(url => 
+          fetch(url, { credentials: 'same-origin' })
+            .then(res => res.ok ? cache.put(url, res) : Promise.reject('failed'))
+            .catch(() => console.warn(`Failed to cache: ${url}`))
+        )
+      ))
+      .then(() => self.skipWaiting())
+      .catch(err => console.error('Cache install error:', err))
+  );
 });
 
 self.addEventListener('activate', e => {
